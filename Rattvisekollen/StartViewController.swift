@@ -19,7 +19,7 @@ class StartViewController: UIViewController {
     
     func setupButton() {
         self.barcodeButton.layer.borderWidth = 1.0
-        self.barcodeButton.layer.borderColor = self.barcodeButton.tintColor.CGColor
+        self.barcodeButton.layer.borderColor = Theme.darkGreen().CGColor
     }
     
     override func viewDidLayoutSubviews() {
