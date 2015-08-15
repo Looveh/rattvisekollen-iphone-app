@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 
 class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControllerTransitioningDelegate {
     
@@ -67,7 +66,6 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
     }
     
     // MARK: Actions
-
     
     @IBAction func closeButtonPressed(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil);
