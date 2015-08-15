@@ -29,6 +29,7 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
         super.viewDidLoad()
         self.barcodeScanner = BarcodeScanner(previewView: self.cameraLayerView, delegate: self)
         self.setupMaskView()
+        self.setupCloseButton()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -50,7 +51,15 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationDidEnterBackgroundNotification, object: nil)
     }
     
-    // MARK: Mask view
+    // MARK: View setup
+    
+    func setupCloseButton() {
+        self.closeButton.layer.cornerRadius = 4.0
+        self.closeButton.layer.borderWidth = 0.5
+        self.closeButton.layer.borderColor = Theme.lightGreen().CGColor
+        self.closeButton.setTitleColor(Theme.darkGreen(), forState: UIControlState.Normal)
+        self.closeButton.backgroundColor = Theme.backgroundColor()
+    }
     
     func setupMaskView() {
         self.maskView = UIView()

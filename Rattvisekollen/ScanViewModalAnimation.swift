@@ -38,7 +38,7 @@ class ScanViewModalAnimation: NSObject, UIViewControllerAnimatedTransitioning {
             UIView.animateWithDuration(0.5, delay: 0.1, usingSpringWithDamping:0.6, initialSpringVelocity: 2.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
                 scanViewController.maskView.transform = CGAffineTransformIdentity
                 }, completion: { (_) -> Void in
-                    transitionContext.completeTransition(true as Bool)
+                    transitionContext.completeTransition(true)
             })
         } else {
             UIView.animateWithDuration(0.3, animations: { () -> Void in

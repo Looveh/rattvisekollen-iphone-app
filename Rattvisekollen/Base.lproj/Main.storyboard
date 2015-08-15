@@ -68,7 +68,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.67088711860000005" green="1" blue="0.71690051700000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="bBX-NG-wUg" firstAttribute="leading" secondItem="07x-D4-sK6" secondAttribute="leading" constant="8" id="co1-pi-AwP"/>
                                     <constraint firstItem="bBX-NG-wUg" firstAttribute="centerY" secondItem="07x-D4-sK6" secondAttribute="centerY" id="g5k-AC-4Sg"/>
@@ -76,40 +76,35 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Håll cameran över streckkoden för att scanna" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-xD-L2b" userLabel="Info label">
-                                <rect key="frame" x="70" y="149.5" width="460" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="50" y="153.5" width="500" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gS7-fW-yZA" userLabel="Close button">
-                                <rect key="frame" x="260" y="450" width="80" height="35"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="240" y="450" width="120" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="CvU-Nu-S4h"/>
-                                    <constraint firstAttribute="width" constant="80" id="JGk-Hs-Czc"/>
+                                    <constraint firstAttribute="height" constant="45" id="CvU-Nu-S4h"/>
+                                    <constraint firstAttribute="width" constant="120" id="JGk-Hs-Czc"/>
                                 </constraints>
                                 <state key="normal" title="Avbryt">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.55637231596842118" green="1" blue="0.67146466173684216" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="f4O-29-fwL" eventType="touchUpInside" id="kcD-9F-w0g"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.66518702649999994" green="0.66518702649999994" blue="0.66518702649999994" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.66518702649999994" green="0.66518702649999994" blue="0.66518702649999994" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gS7-fW-yZA" firstAttribute="top" secondItem="bBX-NG-wUg" secondAttribute="bottom" constant="30" id="8GG-xQ-on3"/>
                             <constraint firstItem="07x-D4-sK6" firstAttribute="leading" secondItem="enw-Yy-ghU" secondAttribute="leading" id="CIS-lk-Ofo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nAV-xD-L2b" secondAttribute="trailing" constant="50" id="EGN-5d-40p"/>
-                            <constraint firstItem="nAV-xD-L2b" firstAttribute="leading" secondItem="enw-Yy-ghU" secondAttribute="leadingMargin" constant="50" id="YPj-PP-wJB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nAV-xD-L2b" secondAttribute="trailing" constant="30" id="EGN-5d-40p"/>
+                            <constraint firstItem="nAV-xD-L2b" firstAttribute="leading" secondItem="enw-Yy-ghU" secondAttribute="leadingMargin" constant="30" id="YPj-PP-wJB"/>
                             <constraint firstItem="gS7-fW-yZA" firstAttribute="centerX" secondItem="enw-Yy-ghU" secondAttribute="centerX" id="a4z-9W-Fnq"/>
                             <constraint firstAttribute="trailing" secondItem="07x-D4-sK6" secondAttribute="trailing" id="eYb-GT-7Xd"/>
-                            <constraint firstItem="bBX-NG-wUg" firstAttribute="top" secondItem="nAV-xD-L2b" secondAttribute="bottom" constant="30" id="gMz-es-7fF"/>
+                            <constraint firstItem="bBX-NG-wUg" firstAttribute="top" secondItem="nAV-xD-L2b" secondAttribute="bottom" constant="25" id="gMz-es-7fF"/>
                             <constraint firstItem="07x-D4-sK6" firstAttribute="top" secondItem="hBE-9p-U6y" secondAttribute="bottom" id="oMF-d6-VOV"/>
                             <constraint firstItem="tYP-BD-UHG" firstAttribute="top" secondItem="07x-D4-sK6" secondAttribute="bottom" id="wmI-sv-moW"/>
                         </constraints>
