@@ -49,15 +49,15 @@ class BarcodeScanner: NSObject, AVCaptureMetadataOutputObjectsDelegate {
             let input = try AVCaptureDeviceInput(device: self.captureDevice)
             
             if let device = self.captureDevice {
-                try self.captureDevice?.lockForConfiguration()
+                try device.lockForConfiguration()
                 
                 if device.isFocusModeSupported(.ContinuousAutoFocus) {
                     device.focusMode = .ContinuousAutoFocus
                 }
-                if self.captureDevice.autoFocusRangeRestrictionSupported {
-                    self.captureDevice.autoFocusRangeRestriction = .Near
+                if device.autoFocusRangeRestrictionSupported {
+                    device.autoFocusRangeRestriction = .Near
                 }
-                self.captureDevice.unlockForConfiguration()
+                device.unlockForConfiguration()
             }
             
             if self.captureSession.canAddInput(input) {
@@ -84,8 +84,10 @@ class BarcodeScanner: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         var barcodeObjects : Array<AVMetadataMachineReadableCodeObject> = []
+
         for metadataObject : AnyObject in metadataObjects {
             if let videoPreviewLayer = self.videoPreviewLayer {
+
                 let transformedMetadataObject = videoPreviewLayer.transformedMetadataObjectForMetadataObject(metadataObject as! AVMetadataObject)
                 if transformedMetadataObject.isKindOfClass(AVMetadataMachineReadableCodeObject.self) {
                     let barcodeObject = transformedMetadataObject as! AVMetadataMachineReadableCodeObject
