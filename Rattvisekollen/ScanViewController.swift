@@ -54,7 +54,7 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
     
     func setupMaskView() {
         self.maskView = UIView()
-        self.maskView.layer.cornerRadius = 8.0
+        self.maskView.layer.cornerRadius = 6.0
         self.maskView.backgroundColor = UIColor.whiteColor()
         
         self.cameraLayerView.maskView = maskView;
