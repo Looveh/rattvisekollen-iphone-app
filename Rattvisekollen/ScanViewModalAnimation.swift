@@ -10,13 +10,8 @@ import UIKit
 
 class ScanViewModalAnimation: NSObject, UIViewControllerAnimatedTransitioning {
     
-    internal var isPresenting: Bool
+    internal var isPresenting: Bool = false
     
-    override init() {
-        self.isPresenting = false
-        super.init()
-    }
-
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return self.isPresenting ? 0.6 : 0.3
     }
