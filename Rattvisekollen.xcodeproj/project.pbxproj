@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */; };
 		DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78921B7F32AD00371C1C /* AppDelegate.swift */; };
 		DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78941B7F32AD00371C1C /* StartViewController.swift */; };
 		DBBE78981B7F32AD00371C1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBE78961B7F32AD00371C1C /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewModalAnimation.swift; sourceTree = "<group>"; };
 		DBBE788F1B7F32AD00371C1C /* Rattvisekollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rattvisekollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBE78921B7F32AD00371C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBBE78941B7F32AD00371C1C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		DBBE78C11B7F37AF00371C1C /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */,
 				DBBE78C31B7F37E800371C1C /* ScanViewController.swift */,
 				DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */,
 			);
@@ -289,6 +292,7 @@
 				DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */,
 				DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */,
 				DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */,
+				DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

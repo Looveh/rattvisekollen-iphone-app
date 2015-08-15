@@ -10,16 +10,21 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    @IBOutlet weak var barcodeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.setupButton()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setupButton() {
+        self.barcodeButton.layer.borderWidth = 1.0
+        self.barcodeButton.layer.borderColor = self.barcodeButton.tintColor.CGColor
     }
-
-
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.barcodeButton.layer.cornerRadius = self.self.barcodeButton.bounds.height/2
+    }
 }
 
