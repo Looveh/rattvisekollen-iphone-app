@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78921B7F32AD00371C1C /* AppDelegate.swift */; };
-		DBBE78951B7F32AD00371C1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78941B7F32AD00371C1C /* ViewController.swift */; };
+		DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78941B7F32AD00371C1C /* StartViewController.swift */; };
 		DBBE78981B7F32AD00371C1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBE78961B7F32AD00371C1C /* Main.storyboard */; };
 		DBBE789A1B7F32AD00371C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBE78991B7F32AD00371C1C /* Assets.xcassets */; };
 		DBBE789D1B7F32AD00371C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBE789B1B7F32AD00371C1C /* LaunchScreen.storyboard */; };
 		DBBE78A81B7F32AD00371C1C /* RattvisekollenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78A71B7F32AD00371C1C /* RattvisekollenTests.swift */; };
 		DBBE78B31B7F32AD00371C1C /* RattvisekollenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78B21B7F32AD00371C1C /* RattvisekollenUITests.swift */; };
+		DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78C31B7F37E800371C1C /* ScanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		DBBE788F1B7F32AD00371C1C /* Rattvisekollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rattvisekollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBE78921B7F32AD00371C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBBE78941B7F32AD00371C1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBBE78941B7F32AD00371C1C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		DBBE78971B7F32AD00371C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBBE78991B7F32AD00371C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBBE789C1B7F32AD00371C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		DBBE78AE1B7F32AD00371C1C /* RattvisekollenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RattvisekollenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBE78B21B7F32AD00371C1C /* RattvisekollenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RattvisekollenUITests.swift; sourceTree = "<group>"; };
 		DBBE78B41B7F32AD00371C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBE78C31B7F37E800371C1C /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = ../../rattvisekollen/Rattvisekollen/ScanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				DBBE78921B7F32AD00371C1C /* AppDelegate.swift */,
-				DBBE78941B7F32AD00371C1C /* ViewController.swift */,
 				DBBE78961B7F32AD00371C1C /* Main.storyboard */,
-				DBBE78991B7F32AD00371C1C /* Assets.xcassets */,
-				DBBE789B1B7F32AD00371C1C /* LaunchScreen.storyboard */,
-				DBBE789E1B7F32AD00371C1C /* Info.plist */,
+				DBBE78C01B7F37A900371C1C /* Start */,
+				DBBE78C11B7F37AF00371C1C /* Camera */,
+				DBBE78C21B7F37BC00371C1C /* Resources */,
 			);
 			path = Rattvisekollen;
 			sourceTree = "<group>";
@@ -123,6 +124,32 @@
 				DBBE78B41B7F32AD00371C1C /* Info.plist */,
 			);
 			path = RattvisekollenUITests;
+			sourceTree = "<group>";
+		};
+		DBBE78C01B7F37A900371C1C /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				DBBE78941B7F32AD00371C1C /* StartViewController.swift */,
+			);
+			name = Start;
+			sourceTree = "<group>";
+		};
+		DBBE78C11B7F37AF00371C1C /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				DBBE78C31B7F37E800371C1C /* ScanViewController.swift */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		DBBE78C21B7F37BC00371C1C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBBE78991B7F32AD00371C1C /* Assets.xcassets */,
+				DBBE789B1B7F32AD00371C1C /* LaunchScreen.storyboard */,
+				DBBE789E1B7F32AD00371C1C /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBBE78951B7F32AD00371C1C /* ViewController.swift in Sources */,
+				DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */,
 				DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */,
+				DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ibl-5y-r83">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKF-XE-vFb" userLabel="Barcode view">
+                                <rect key="frame" x="265" y="265" width="70" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzA-YO-GGg" userLabel="Barcode Button">
+                                        <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                        <state key="normal" image="Icon Barcode"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="ObB-FJ-aow"/>
+                                    <constraint firstItem="MzA-YO-GGg" firstAttribute="centerX" secondItem="YKF-XE-vFb" secondAttribute="centerX" id="YyR-Mm-aWe"/>
+                                    <constraint firstItem="MzA-YO-GGg" firstAttribute="centerY" secondItem="YKF-XE-vFb" secondAttribute="centerY" id="nW2-AA-h26"/>
+                                    <constraint firstAttribute="height" constant="70" id="w53-oj-5lx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549019602" green="1" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YKF-XE-vFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G66-Zz-gCD"/>
+                            <constraint firstItem="YKF-XE-vFb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nsD-RW-TRG"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9PA-o1-NI9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1278" y="462"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VQm-Xo-bj9">
+            <objects>
+                <viewController id="f4O-29-fwL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hBE-9p-U6y"/>
+                        <viewControllerLayoutGuide type="bottom" id="tYP-BD-UHG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="enw-Yy-ghU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07x-D4-sK6" userLabel="Camera layer">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="07x-D4-sK6" firstAttribute="leading" secondItem="enw-Yy-ghU" secondAttribute="leading" id="CIS-lk-Ofo"/>
+                            <constraint firstAttribute="trailing" secondItem="07x-D4-sK6" secondAttribute="trailing" id="eYb-GT-7Xd"/>
+                            <constraint firstItem="07x-D4-sK6" firstAttribute="top" secondItem="hBE-9p-U6y" secondAttribute="bottom" id="oMF-d6-VOV"/>
+                            <constraint firstItem="tYP-BD-UHG" firstAttribute="top" secondItem="07x-D4-sK6" secondAttribute="bottom" id="wmI-sv-moW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sag-td-BWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966" y="151"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YxD-4M-Dbe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ibl-5y-r83" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9aL-KD-Tzh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.67088711863887573" green="1" blue="0.71690051697297164" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WjQ-Ex-PBX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s3o-Ox-bNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="555" y="462"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon Barcode" width="50" height="50"/>
+    </resources>
 </document>
