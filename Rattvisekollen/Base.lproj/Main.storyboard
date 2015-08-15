@@ -7,7 +7,7 @@
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="Rattvisekollen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,7 +21,11 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzA-YO-GGg" userLabel="Barcode Button">
                                         <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Icon Barcode"/>
+                                        <connections>
+                                            <segue destination="f4O-29-fwL" kind="presentation" id="OK2-Sv-gnf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -56,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="1278" y="462"/>
         </scene>
-        <!--View Controller-->
+        <!--Scan View Controller-->
         <scene sceneID="VQm-Xo-bj9">
             <objects>
-                <viewController id="f4O-29-fwL" sceneMemberID="viewController">
+                <viewController id="f4O-29-fwL" customClass="ScanViewController" customModule="Rattvisekollen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hBE-9p-U6y"/>
                         <viewControllerLayoutGuide type="bottom" id="tYP-BD-UHG"/>
@@ -81,10 +85,13 @@
                             <constraint firstItem="tYP-BD-UHG" firstAttribute="top" secondItem="07x-D4-sK6" secondAttribute="bottom" id="wmI-sv-moW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraLayerView" destination="07x-D4-sK6" id="LCA-dA-On9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sag-td-BWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966" y="151"/>
+            <point key="canvasLocation" x="1989" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YxD-4M-Dbe">

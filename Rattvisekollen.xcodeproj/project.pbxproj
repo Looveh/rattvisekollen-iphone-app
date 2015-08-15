@@ -15,6 +15,7 @@
 		DBBE78A81B7F32AD00371C1C /* RattvisekollenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78A71B7F32AD00371C1C /* RattvisekollenTests.swift */; };
 		DBBE78B31B7F32AD00371C1C /* RattvisekollenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78B21B7F32AD00371C1C /* RattvisekollenUITests.swift */; };
 		DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78C31B7F37E800371C1C /* ScanViewController.swift */; };
+		DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DBBE78B21B7F32AD00371C1C /* RattvisekollenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RattvisekollenUITests.swift; sourceTree = "<group>"; };
 		DBBE78B41B7F32AD00371C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBBE78C31B7F37E800371C1C /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = ../../rattvisekollen/Rattvisekollen/ScanViewController.swift; sourceTree = "<group>"; };
+		DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				DBBE78C31B7F37E800371C1C /* ScanViewController.swift */,
+				DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */,
+				DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */,
 				DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */,
 				DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */,
 			);
@@ -509,6 +513,7 @@
 				DBBE78B91B7F32AD00371C1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBBE78BA1B7F32AD00371C1C /* Build configuration list for PBXNativeTarget "RattvisekollenTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				DBBE78BC1B7F32AD00371C1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBBE78BD1B7F32AD00371C1C /* Build configuration list for PBXNativeTarget "RattvisekollenUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +531,7 @@
 				DBBE78BF1B7F32AD00371C1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
