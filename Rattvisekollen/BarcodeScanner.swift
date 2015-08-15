@@ -75,7 +75,7 @@ class BarcodeScanner: NSObject, AVCaptureMetadataOutputObjectsDelegate {
             self.metadataOutput.setMetadataObjectsDelegate(self, queue: queue)
             if self.captureSession.canAddOutput(self.metadataOutput) {
                 self.captureSession.addOutput(self.metadataOutput)
-                self.metadataOutput.metadataObjectTypes = self.metadataOutput.availableMetadataObjectTypes
+                self.metadataOutput.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeUPCECode, AVMetadataObjectTypeQRCode]
             }
         } catch let error as NSError {
             print(error)
