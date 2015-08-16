@@ -52,7 +52,6 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.barcodeScanner.startScanning()
-        self.showFlashAndCompleteScanningWithBarcode("lol")
     }
     
     override func viewWillAppear(animated: Bool) {
