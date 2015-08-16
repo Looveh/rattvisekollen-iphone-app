@@ -97,7 +97,7 @@ class BarcodeScanner: NSObject, AVCaptureMetadataOutputObjectsDelegate {
         }
         
         for barcode : AVMetadataMachineReadableCodeObject in barcodeObjects {
-            self.delegate .scannerDidOutputData(barcode.stringValue)
+            self.delegate.scannerDidOutputData(barcode.stringValue)
         }
     }
 }

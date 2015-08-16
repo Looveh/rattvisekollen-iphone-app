@@ -20,6 +20,7 @@
 		DBBF50111B809E4500759C40 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBF50101B809E4500759C40 /* Product.storyboard */; };
 		DBBF50131B80A52A00759C40 /* ScoreSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF50121B80A52A00759C40 /* ScoreSliderView.swift */; };
 		DBBF50151B80A57F00759C40 /* ScoreSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF50141B80A57F00759C40 /* ScoreSliderView.xib */; };
+		DBBF50171B80AA7400759C40 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF50161B80AA7400759C40 /* ProductViewController.swift */; };
 		DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */; };
 		DBE0691B1B7F6F4600E6CA3F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0691A1B7F6F4600E6CA3F /* Theme.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		DBBF50101B809E4500759C40 /* Product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
 		DBBF50121B80A52A00759C40 /* ScoreSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreSliderView.swift; sourceTree = "<group>"; };
 		DBBF50141B80A57F00759C40 /* ScoreSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreSliderView.xib; sourceTree = "<group>"; };
+		DBBF50161B80AA7400759C40 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
 		DBE0691A1B7F6F4600E6CA3F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,10 +155,10 @@
 		DBBE78C11B7F37AF00371C1C /* Scanning */ = {
 			isa = PBXGroup;
 			children = (
-				DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */,
-				DBBE78C31B7F37E800371C1C /* ScanViewController.swift */,
-				DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */,
 				DBBF500D1B809AE100759C40 /* Scanner.storyboard */,
+				DBBE78C31B7F37E800371C1C /* ScanViewController.swift */,
+				DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */,
+				DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */,
 			);
 			name = Scanning;
 			sourceTree = "<group>";
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				DBBF50101B809E4500759C40 /* Product.storyboard */,
+				DBBF50161B80AA7400759C40 /* ProductViewController.swift */,
 				DBBF50121B80A52A00759C40 /* ScoreSliderView.swift */,
 				DBBF50141B80A57F00759C40 /* ScoreSliderView.xib */,
 			);
@@ -329,6 +332,7 @@
 				DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */,
 				DBE0691B1B7F6F4600E6CA3F /* Theme.swift in Sources */,
 				DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */,
+				DBBF50171B80AA7400759C40 /* ProductViewController.swift in Sources */,
 				DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

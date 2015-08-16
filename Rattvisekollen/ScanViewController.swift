@@ -8,16 +8,26 @@
 
 import UIKit
 
+protocol ScanViewControllerDelegate: class {
+    
+    func scanViewController(scanViewController: ScanViewController, foundBarcode barcode: String)
+    
+}
+
 class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControllerTransitioningDelegate {
+    
+    internal weak var delegate: ScanViewControllerDelegate?
     
     @IBOutlet weak var cameraLayerView: UIView!
     @IBOutlet weak var maskViewPositionView: UIView!
+    @IBOutlet weak var scanFlashLabel: UILabel!
 
     @IBOutlet internal weak var closeButton: UIButton!
     @IBOutlet internal weak var infoLabel: UILabel!
     
     internal var maskView: UIView!
     var barcodeScanner: BarcodeScanner!
+    var foundBarcode: Bool = false
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -25,9 +35,10 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
         self.transitioningDelegate = self
     }
     
-    class func startScanningFromViewController(presentingViewController: UIViewController) {
+    class func startScanningFromViewController(presentingViewController: UIViewController, delegate: ScanViewControllerDelegate) {
         let storyboard = UIStoryboard(name: "Scanner", bundle: nil)
-        let scanViewController = storyboard.instantiateInitialViewController()!
+        let scanViewController = storyboard.instantiateInitialViewController() as! ScanViewController
+        scanViewController.delegate = delegate
         presentingViewController.presentViewController(scanViewController, animated: true, completion: nil)
     }
 
@@ -97,7 +108,27 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
     // MARK: BarcodeOutputDelegate
     
     func scannerDidOutputData(data: String) {
-        print(data)
+        if self.foundBarcode {
+            return
+        }
+        self.foundBarcode = true
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.showFlashAndCompleteScanningWithBarcode(data)
+        }
+    }
+    
+    func showFlashAndCompleteScanningWithBarcode(barcode: String) {
+        self.scanFlashLabel.text = barcode
+        self.scanFlashLabel.alpha = 1.0
+
+        UIView.animateWithDuration(0.8, animations: { () -> Void in
+            self.scanFlashLabel.alpha = 0.0
+
+            }) { (_) -> Void in
+                self.dismissViewControllerAnimated(true) { () -> Void in
+                    self.delegate?.scanViewController(self, foundBarcode: barcode)
+                }
+        }
     }
     
     // MARK : UIViewControllerTransitioningDelegate

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+class StartViewController: UIViewController, ScanViewControllerDelegate {
 
     @IBOutlet weak var barcodeButton: UIButton!
     
@@ -23,12 +23,19 @@ class StartViewController: UIViewController {
     }
     
     @IBAction func scanningButtonPressed(sender: AnyObject) {
-        ScanViewController.startScanningFromViewController(self)
+        ScanViewController.startScanningFromViewController(self, delegate: self)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.barcodeButton.layer.cornerRadius = self.self.barcodeButton.bounds.height/2
+    }
+    
+    
+    // MARK: ScanViewControllerDelegate
+    
+    func scanViewController(scanViewController: ScanViewController, foundBarcode barcode: String) {
+        ProductViewController.pushFromViewController(self, forProductCode: barcode)
     }
 }
 

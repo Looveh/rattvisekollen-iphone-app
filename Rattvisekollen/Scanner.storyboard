@@ -4,6 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CourierNewBold.ttf">
+            <string>CourierNewPS-BoldMT</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Scan View Controller-->
         <scene sceneID="nQx-GN-fwI">
@@ -22,7 +27,7 @@
                                 <subviews>
                                     <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOG-PH-U3m" userLabel="Mask View Position">
                                         <rect key="frame" x="8" y="180" width="584" height="220"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.67088711860000005" green="1" blue="0.71690051700000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="220" id="a0A-ht-8rV"/>
                                         </constraints>
@@ -35,8 +40,14 @@
                                     <constraint firstItem="uOG-PH-U3m" firstAttribute="leading" secondItem="rvC-f1-Yjr" secondAttribute="leading" constant="8" id="Qab-mC-scn"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07771273891723" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbJ-sl-EaD" userLabel="Barcode label">
+                                <rect key="frame" x="228.5" y="300.5" width="143" height="19.5"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
+                                <color key="textColor" red="0.67088711860000005" green="1" blue="0.71690051700000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Håll kameran över streckkoden för att scanna" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0k-hT-Cne" userLabel="Info label">
-                                <rect key="frame" x="50" y="153.5" width="500" height="21.5"/>
+                                <rect key="frame" x="50" y="153" width="500" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -63,10 +74,12 @@
                             <constraint firstItem="Nav-Br-RdA" firstAttribute="top" secondItem="uOG-PH-U3m" secondAttribute="bottom" constant="30" id="Ec3-Wo-23n"/>
                             <constraint firstItem="h0k-hT-Cne" firstAttribute="leading" secondItem="5IF-dt-ZKd" secondAttribute="leadingMargin" constant="30" id="F9R-vt-7cf"/>
                             <constraint firstItem="rvC-f1-Yjr" firstAttribute="top" secondItem="es1-D5-SN8" secondAttribute="bottom" id="FSo-CL-6PE"/>
+                            <constraint firstItem="EbJ-sl-EaD" firstAttribute="centerX" secondItem="uOG-PH-U3m" secondAttribute="centerX" id="KEH-g5-WYl"/>
                             <constraint firstItem="SGT-p1-Bkm" firstAttribute="top" secondItem="rvC-f1-Yjr" secondAttribute="bottom" id="Qmu-CW-UEa"/>
                             <constraint firstItem="rvC-f1-Yjr" firstAttribute="leading" secondItem="5IF-dt-ZKd" secondAttribute="leading" id="TSY-dK-CPD"/>
                             <constraint firstAttribute="trailing" secondItem="rvC-f1-Yjr" secondAttribute="trailing" id="VFY-f6-cAX"/>
                             <constraint firstItem="uOG-PH-U3m" firstAttribute="top" secondItem="h0k-hT-Cne" secondAttribute="bottom" constant="25" id="biU-vD-oMp"/>
+                            <constraint firstItem="EbJ-sl-EaD" firstAttribute="centerY" secondItem="uOG-PH-U3m" secondAttribute="centerY" id="mpc-6k-hBi"/>
                         </constraints>
                     </view>
                     <connections>
@@ -74,6 +87,7 @@
                         <outlet property="closeButton" destination="Nav-Br-RdA" id="f3d-Kr-BkK"/>
                         <outlet property="infoLabel" destination="h0k-hT-Cne" id="zv5-LU-cl8"/>
                         <outlet property="maskViewPositionView" destination="uOG-PH-U3m" id="A2S-OY-GVx"/>
+                        <outlet property="scanFlashLabel" destination="EbJ-sl-EaD" id="vi6-UC-bzl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqE-rJ-Dex" userLabel="First Responder" sceneMemberID="firstResponder"/>
