@@ -43,7 +43,7 @@ class BarcodeScanner: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     func setupCamera() {
-        captureSession.sessionPreset = AVCaptureSessionPresetMedium
+        captureSession.sessionPreset = AVCaptureSessionPresetHigh
         
         do {
             let input = try AVCaptureDeviceInput(device: self.captureDevice)

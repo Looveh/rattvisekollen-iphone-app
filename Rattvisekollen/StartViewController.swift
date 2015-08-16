@@ -22,6 +22,10 @@ class StartViewController: UIViewController {
         self.barcodeButton.layer.borderColor = Theme.darkGreen().CGColor
     }
     
+    @IBAction func scanningButtonPressed(sender: AnyObject) {
+        ScanViewController.startScanningFromViewController(self)
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.barcodeButton.layer.cornerRadius = self.self.barcodeButton.bounds.height/2

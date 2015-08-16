@@ -24,6 +24,12 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
         self.modalPresentationStyle = .Custom
         self.transitioningDelegate = self
     }
+    
+    class func startScanningFromViewController(presentingViewController: UIViewController) {
+        let storyboard = UIStoryboard(name: "Scanner", bundle: nil)
+        let scanViewController = storyboard.instantiateInitialViewController()!
+        presentingViewController.presentViewController(scanViewController, animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

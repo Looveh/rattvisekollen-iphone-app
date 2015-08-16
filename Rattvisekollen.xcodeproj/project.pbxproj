@@ -10,12 +10,13 @@
 		DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */; };
 		DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78921B7F32AD00371C1C /* AppDelegate.swift */; };
 		DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78941B7F32AD00371C1C /* StartViewController.swift */; };
-		DBBE78981B7F32AD00371C1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBE78961B7F32AD00371C1C /* Main.storyboard */; };
+		DBBE78981B7F32AD00371C1C /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBE78961B7F32AD00371C1C /* Start.storyboard */; };
 		DBBE789A1B7F32AD00371C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBE78991B7F32AD00371C1C /* Assets.xcassets */; };
 		DBBE789D1B7F32AD00371C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBE789B1B7F32AD00371C1C /* LaunchScreen.storyboard */; };
 		DBBE78A81B7F32AD00371C1C /* RattvisekollenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78A71B7F32AD00371C1C /* RattvisekollenTests.swift */; };
 		DBBE78B31B7F32AD00371C1C /* RattvisekollenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78B21B7F32AD00371C1C /* RattvisekollenUITests.swift */; };
 		DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78C31B7F37E800371C1C /* ScanViewController.swift */; };
+		DBBF500E1B809AE100759C40 /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBF500D1B809AE100759C40 /* Scanner.storyboard */; };
 		DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */; };
 		DBE0691B1B7F6F4600E6CA3F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0691A1B7F6F4600E6CA3F /* Theme.swift */; };
 /* End PBXBuildFile section */
@@ -42,7 +43,7 @@
 		DBBE788F1B7F32AD00371C1C /* Rattvisekollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rattvisekollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBE78921B7F32AD00371C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBBE78941B7F32AD00371C1C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		DBBE78971B7F32AD00371C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBBE78971B7F32AD00371C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Start.storyboard; sourceTree = "<group>"; };
 		DBBE78991B7F32AD00371C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBBE789C1B7F32AD00371C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBBE789E1B7F32AD00371C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		DBBE78B21B7F32AD00371C1C /* RattvisekollenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RattvisekollenUITests.swift; sourceTree = "<group>"; };
 		DBBE78B41B7F32AD00371C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBBE78C31B7F37E800371C1C /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = ../../rattvisekollen/Rattvisekollen/ScanViewController.swift; sourceTree = "<group>"; };
+		DBBF500D1B809AE100759C40 /* Scanner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
 		DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
 		DBE0691A1B7F6F4600E6CA3F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				DBBE78921B7F32AD00371C1C /* AppDelegate.swift */,
-				DBBE78961B7F32AD00371C1C /* Main.storyboard */,
 				DBE069191B7F6F3700E6CA3F /* UI */,
 				DBBE78C01B7F37A900371C1C /* Start */,
 				DBBE78C11B7F37AF00371C1C /* Camera */,
@@ -137,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				DBBE78941B7F32AD00371C1C /* StartViewController.swift */,
+				DBBE78961B7F32AD00371C1C /* Start.storyboard */,
 			);
 			name = Start;
 			sourceTree = "<group>";
@@ -147,6 +149,7 @@
 				DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */,
 				DBBE78C31B7F37E800371C1C /* ScanViewController.swift */,
 				DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */,
+				DBBF500D1B809AE100759C40 /* Scanner.storyboard */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -274,8 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBBE789D1B7F32AD00371C1C /* LaunchScreen.storyboard in Resources */,
+				DBBF500E1B809AE100759C40 /* Scanner.storyboard in Resources */,
 				DBBE789A1B7F32AD00371C1C /* Assets.xcassets in Resources */,
-				DBBE78981B7F32AD00371C1C /* Main.storyboard in Resources */,
+				DBBE78981B7F32AD00371C1C /* Start.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,12 +345,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DBBE78961B7F32AD00371C1C /* Main.storyboard */ = {
+		DBBE78961B7F32AD00371C1C /* Start.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DBBE78971B7F32AD00371C1C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Start.storyboard;
 			sourceTree = "<group>";
 		};
 		DBBE789B1B7F32AD00371C1C /* LaunchScreen.storyboard */ = {

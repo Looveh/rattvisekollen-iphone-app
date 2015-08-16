@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController = UIStoryboard(name: "Start", bundle: nil).instantiateInitialViewController()
+
         Theme.setupAppearance(self.window!)
         return true
     }

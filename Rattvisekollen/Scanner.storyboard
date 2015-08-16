@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xSs-hL-ROL">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan View Controller-->
+        <scene sceneID="nQx-GN-fwI">
+            <objects>
+                <viewController id="xSs-hL-ROL" customClass="ScanViewController" customModule="Rattvisekollen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="es1-D5-SN8"/>
+                        <viewControllerLayoutGuide type="bottom" id="SGT-p1-Bkm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5IF-dt-ZKd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvC-f1-Yjr" userLabel="Camera layer">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOG-PH-U3m" userLabel="Mask View Position">
+                                        <rect key="frame" x="8" y="180" width="584" height="220"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="220" id="a0A-ht-8rV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uOG-PH-U3m" secondAttribute="trailing" constant="8" id="7Ci-VA-cBw"/>
+                                    <constraint firstItem="uOG-PH-U3m" firstAttribute="centerY" secondItem="rvC-f1-Yjr" secondAttribute="centerY" id="D2P-kL-Agv"/>
+                                    <constraint firstItem="uOG-PH-U3m" firstAttribute="leading" secondItem="rvC-f1-Yjr" secondAttribute="leading" constant="8" id="Qab-mC-scn"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Håll kameran över streckkoden för att scanna" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0k-hT-Cne" userLabel="Info label">
+                                <rect key="frame" x="50" y="153.5" width="500" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nav-Br-RdA" userLabel="Close button">
+                                <rect key="frame" x="240" y="450" width="120" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="1Oe-BF-cgM"/>
+                                    <constraint firstAttribute="height" constant="45" id="GCq-yP-za9"/>
+                                </constraints>
+                                <state key="normal" title="Avbryt">
+                                    <color key="titleColor" red="0.55637231600000003" green="1" blue="0.67146466169999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="xSs-hL-ROL" eventType="touchUpInside" id="3zS-uJ-atU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66518702649999994" green="0.66518702649999994" blue="0.66518702649999994" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="h0k-hT-Cne" secondAttribute="trailing" constant="30" id="1TB-PS-zGT"/>
+                            <constraint firstItem="Nav-Br-RdA" firstAttribute="centerX" secondItem="5IF-dt-ZKd" secondAttribute="centerX" id="1zU-jx-DQZ"/>
+                            <constraint firstItem="Nav-Br-RdA" firstAttribute="top" secondItem="uOG-PH-U3m" secondAttribute="bottom" constant="30" id="Ec3-Wo-23n"/>
+                            <constraint firstItem="h0k-hT-Cne" firstAttribute="leading" secondItem="5IF-dt-ZKd" secondAttribute="leadingMargin" constant="30" id="F9R-vt-7cf"/>
+                            <constraint firstItem="rvC-f1-Yjr" firstAttribute="top" secondItem="es1-D5-SN8" secondAttribute="bottom" id="FSo-CL-6PE"/>
+                            <constraint firstItem="SGT-p1-Bkm" firstAttribute="top" secondItem="rvC-f1-Yjr" secondAttribute="bottom" id="Qmu-CW-UEa"/>
+                            <constraint firstItem="rvC-f1-Yjr" firstAttribute="leading" secondItem="5IF-dt-ZKd" secondAttribute="leading" id="TSY-dK-CPD"/>
+                            <constraint firstAttribute="trailing" secondItem="rvC-f1-Yjr" secondAttribute="trailing" id="VFY-f6-cAX"/>
+                            <constraint firstItem="uOG-PH-U3m" firstAttribute="top" secondItem="h0k-hT-Cne" secondAttribute="bottom" constant="25" id="biU-vD-oMp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraLayerView" destination="rvC-f1-Yjr" id="42E-Fn-JJ9"/>
+                        <outlet property="closeButton" destination="Nav-Br-RdA" id="f3d-Kr-BkK"/>
+                        <outlet property="infoLabel" destination="h0k-hT-Cne" id="zv5-LU-cl8"/>
+                        <outlet property="maskViewPositionView" destination="uOG-PH-U3m" id="A2S-OY-GVx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqE-rJ-Dex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989" y="151"/>
+        </scene>
+    </scenes>
+</document>
