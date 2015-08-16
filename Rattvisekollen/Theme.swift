@@ -31,7 +31,7 @@ class Theme: NSObject {
     }
     
     class func backgroundColor() -> UIColor {
-        return UIColor(red: 251.0/255, green: 255.0/255, blue: 249.0/255, alpha: 1.0)
+        return UIColor(red: 252.0/255, green: 255.0/255, blue: 250.0/255, alpha: 1.0)
     }
     
     class func resizableImageWithColor(color: UIColor) -> UIImage {

@@ -17,6 +17,9 @@
 		DBBE78B31B7F32AD00371C1C /* RattvisekollenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78B21B7F32AD00371C1C /* RattvisekollenUITests.swift */; };
 		DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78C31B7F37E800371C1C /* ScanViewController.swift */; };
 		DBBF500E1B809AE100759C40 /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBF500D1B809AE100759C40 /* Scanner.storyboard */; };
+		DBBF50111B809E4500759C40 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBF50101B809E4500759C40 /* Product.storyboard */; };
+		DBBF50131B80A52A00759C40 /* ScoreSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF50121B80A52A00759C40 /* ScoreSliderView.swift */; };
+		DBBF50151B80A57F00759C40 /* ScoreSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF50141B80A57F00759C40 /* ScoreSliderView.xib */; };
 		DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */; };
 		DBE0691B1B7F6F4600E6CA3F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0691A1B7F6F4600E6CA3F /* Theme.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,9 @@
 		DBBE78B41B7F32AD00371C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBBE78C31B7F37E800371C1C /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = ../../rattvisekollen/Rattvisekollen/ScanViewController.swift; sourceTree = "<group>"; };
 		DBBF500D1B809AE100759C40 /* Scanner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
+		DBBF50101B809E4500759C40 /* Product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		DBBF50121B80A52A00759C40 /* ScoreSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreSliderView.swift; sourceTree = "<group>"; };
+		DBBF50141B80A57F00759C40 /* ScoreSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreSliderView.xib; sourceTree = "<group>"; };
 		DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
 		DBE0691A1B7F6F4600E6CA3F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +116,8 @@
 				DBBE78921B7F32AD00371C1C /* AppDelegate.swift */,
 				DBE069191B7F6F3700E6CA3F /* UI */,
 				DBBE78C01B7F37A900371C1C /* Start */,
-				DBBE78C11B7F37AF00371C1C /* Camera */,
+				DBBE78C11B7F37AF00371C1C /* Scanning */,
+				DBBF500F1B809E2400759C40 /* Product */,
 				DBBE78C21B7F37BC00371C1C /* Resources */,
 			);
 			path = Rattvisekollen;
@@ -143,7 +150,7 @@
 			name = Start;
 			sourceTree = "<group>";
 		};
-		DBBE78C11B7F37AF00371C1C /* Camera */ = {
+		DBBE78C11B7F37AF00371C1C /* Scanning */ = {
 			isa = PBXGroup;
 			children = (
 				DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */,
@@ -151,7 +158,7 @@
 				DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */,
 				DBBF500D1B809AE100759C40 /* Scanner.storyboard */,
 			);
-			name = Camera;
+			name = Scanning;
 			sourceTree = "<group>";
 		};
 		DBBE78C21B7F37BC00371C1C /* Resources */ = {
@@ -162,6 +169,16 @@
 				DBBE789E1B7F32AD00371C1C /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		DBBF500F1B809E2400759C40 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				DBBF50101B809E4500759C40 /* Product.storyboard */,
+				DBBF50121B80A52A00759C40 /* ScoreSliderView.swift */,
+				DBBF50141B80A57F00759C40 /* ScoreSliderView.xib */,
+			);
+			name = Product;
 			sourceTree = "<group>";
 		};
 		DBE069191B7F6F3700E6CA3F /* UI */ = {
@@ -280,6 +297,8 @@
 				DBBF500E1B809AE100759C40 /* Scanner.storyboard in Resources */,
 				DBBE789A1B7F32AD00371C1C /* Assets.xcassets in Resources */,
 				DBBE78981B7F32AD00371C1C /* Start.storyboard in Resources */,
+				DBBF50151B80A57F00759C40 /* ScoreSliderView.xib in Resources */,
+				DBBF50111B809E4500759C40 /* Product.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +325,7 @@
 			files = (
 				DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */,
 				DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */,
+				DBBF50131B80A52A00759C40 /* ScoreSliderView.swift in Sources */,
 				DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */,
 				DBE0691B1B7F6F4600E6CA3F /* Theme.swift in Sources */,
 				DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */,
