@@ -8,7 +8,7 @@
         <!--Product View Controller-->
         <scene sceneID="T4E-wF-VVp">
             <objects>
-                <viewController storyboardIdentifier="ProductViewController" id="d19-Hx-xjG" customClass="ProductViewController" customModule="Rattvisekollen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductViewController" automaticallyAdjustsScrollViewInsets="NO" id="d19-Hx-xjG" customClass="ProductViewController" customModule="Rattvisekollen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KbN-lc-sYT"/>
                         <viewControllerLayoutGuide type="bottom" id="fPE-tH-6vq"/>
