@@ -73,7 +73,7 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
     func setupCloseButton() {
         self.closeButton.layer.cornerRadius = 4.0
         self.closeButton.layer.borderWidth = 0.5
-        self.closeButton.layer.borderColor = Theme.lightGreen().CGColor
+        self.closeButton.layer.borderColor = Theme.green().CGColor
         self.closeButton.setTitleColor(Theme.darkGreen(), forState: UIControlState.Normal)
         self.closeButton.backgroundColor = Theme.backgroundColor()
     }

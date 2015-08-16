@@ -16,18 +16,18 @@ class Theme: NSObject {
         let navbarAppearance = UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self])
         navbarAppearance.setBackgroundImage(self.resizableImageWithColor(self.darkGreen()), forBarMetrics: UIBarMetrics.Default)
         navbarAppearance.shadowImage = UIImage()
-        navbarAppearance.tintColor = UIColor.whiteColor()
+        navbarAppearance.tintColor = self.backgroundColor()
         navbarAppearance.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.whiteColor() ]
         
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
     }
 
-    class func darkGreen() -> UIColor {
-        return UIColor(red: 95.0/255, green: 167.0/255, blue: 90.0/255, alpha: 1.0)
+    class func green() -> UIColor {
+        return UIColor(red: 160.0/255, green: 198.0/255, blue: 156.0/255, alpha: 1.0)
     }
-    
-    class func lightGreen() -> UIColor {
-        return UIColor(red: 142.0/255, green: 255.0/255, blue: 171.0/255, alpha: 1.0)
+
+    class func darkGreen() -> UIColor {
+        return UIColor(red: 39.0/255, green: 117.0/255, blue: 84.0/255, alpha: 1.0)
     }
     
     class func backgroundColor() -> UIColor {

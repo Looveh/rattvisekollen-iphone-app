@@ -14,6 +14,7 @@ class StartViewController: UIViewController, ScanViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = Theme.darkGreen()
         self.setupButton()
     }
     

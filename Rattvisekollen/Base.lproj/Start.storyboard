@@ -17,22 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzA-YO-GGg" userLabel="Barcode Button">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iO-ob-mnA" customClass="RoundRectView" customModule="Rattvisekollen" customModuleProvider="target">
+                                <rect key="frame" x="8" y="72" width="584" height="520"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzA-YO-GGg" userLabel="Barcode Button">
+                                        <rect key="frame" x="242" y="210" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="dv9-Kl-goS"/>
+                                            <constraint firstAttribute="width" secondItem="MzA-YO-GGg" secondAttribute="height" multiplier="1:1" id="qnt-18-ceG"/>
+                                        </constraints>
+                                        <state key="normal" image="Icon Barcode"/>
+                                        <connections>
+                                            <action selector="scanningButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bf2-1q-7UK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="dv9-Kl-goS"/>
-                                    <constraint firstAttribute="width" secondItem="MzA-YO-GGg" secondAttribute="height" multiplier="1:1" id="qnt-18-ceG"/>
+                                    <constraint firstItem="MzA-YO-GGg" firstAttribute="centerX" secondItem="5iO-ob-mnA" secondAttribute="centerX" id="C8v-Sz-1Ep"/>
+                                    <constraint firstItem="MzA-YO-GGg" firstAttribute="centerY" secondItem="5iO-ob-mnA" secondAttribute="centerY" id="ejv-M5-vWv"/>
                                 </constraints>
-                                <state key="normal" image="Icon Barcode"/>
-                                <connections>
-                                    <action selector="scanningButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bf2-1q-7UK"/>
-                                </connections>
-                            </button>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.9882352941176471" green="1" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.15294117647058825" green="0.45882352941176469" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="MzA-YO-GGg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vcc-YC-Awa"/>
-                            <constraint firstItem="MzA-YO-GGg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VyZ-vE-3yv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5iO-ob-mnA" secondAttribute="bottom" constant="8" id="OQf-Ee-y7u"/>
+                            <constraint firstItem="5iO-ob-mnA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="SwR-03-MBf"/>
+                            <constraint firstAttribute="trailing" secondItem="5iO-ob-mnA" secondAttribute="trailing" constant="8" id="g6p-Kg-XzC"/>
+                            <constraint firstItem="5iO-ob-mnA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="puE-Qh-lSP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rättvisekollen" id="9PA-o1-NI9"/>

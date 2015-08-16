@@ -1,15 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScoreSliderView" customModule="Rattvisekollen" customModuleProvider="target">
+            <connections>
+                <outlet property="circleView" destination="3Zx-TY-c1V" id="dKv-rR-50E"/>
+                <outlet property="scoreLabel" destination="3cw-1Q-Uc8" id="0VE-be-hqA"/>
+                <outlet property="scoreSlideBar" destination="USc-Df-Eie" id="n4W-l5-SJ5"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USc-Df-Eie" userLabel="Score slide bar">
+                    <rect key="frame" x="38" y="21" width="262" height="18"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="zb6-j4-pPe"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="zb6-j4-pPe"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zx-TY-c1V" userLabel="Circle view" customClass="CircleView" customModule="Rattvisekollen" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="6" width="48" height="48"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cw-1Q-Uc8" userLabel="Score label">
+                            <rect key="frame" x="19.5" y="15" width="9.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="3cw-1Q-Uc8" firstAttribute="centerY" secondItem="3Zx-TY-c1V" secondAttribute="centerY" id="5iR-3P-2vE"/>
+                        <constraint firstItem="3cw-1Q-Uc8" firstAttribute="centerX" secondItem="3Zx-TY-c1V" secondAttribute="centerX" id="Q5P-OU-iWk"/>
+                        <constraint firstAttribute="width" secondItem="3Zx-TY-c1V" secondAttribute="height" multiplier="1:1" id="kWi-ti-YHp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3Zx-TY-c1V" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5r1-ke-0Pr"/>
+                <constraint firstItem="3Zx-TY-c1V" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9gs-GL-fLy"/>
+                <constraint firstItem="3Zx-TY-c1V" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.8" id="Cb7-pi-FZ4"/>
+                <constraint firstAttribute="trailing" secondItem="USc-Df-Eie" secondAttribute="trailing" id="Ffk-dh-JFO"/>
+                <constraint firstItem="USc-Df-Eie" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.3" id="XMF-fa-Cmz"/>
+                <constraint firstItem="USc-Df-Eie" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cWK-xY-IFb"/>
+                <constraint firstItem="USc-Df-Eie" firstAttribute="leading" secondItem="3Zx-TY-c1V" secondAttribute="trailing" constant="-10" id="rrS-oB-ve3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>

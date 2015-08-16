@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB3F44BD1B80EBF300EB85B3 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F44BC1B80EBF300EB85B3 /* CircleView.swift */; };
+		DB3F44BF1B80F49A00EB85B3 /* RoundRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F44BE1B80F49A00EB85B3 /* RoundRectView.swift */; };
 		DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */; };
 		DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78921B7F32AD00371C1C /* AppDelegate.swift */; };
 		DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78941B7F32AD00371C1C /* StartViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB3F44BC1B80EBF300EB85B3 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		DB3F44BE1B80F49A00EB85B3 /* RoundRectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRectView.swift; sourceTree = "<group>"; };
 		DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewModalAnimation.swift; sourceTree = "<group>"; };
 		DBBE788F1B7F32AD00371C1C /* Rattvisekollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rattvisekollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBE78921B7F32AD00371C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				DBE0691A1B7F6F4600E6CA3F /* Theme.swift */,
+				DB3F44BC1B80EBF300EB85B3 /* CircleView.swift */,
+				DB3F44BE1B80F49A00EB85B3 /* RoundRectView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -326,8 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB3F44BD1B80EBF300EB85B3 /* CircleView.swift in Sources */,
 				DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */,
 				DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */,
+				DB3F44BF1B80F49A00EB85B3 /* RoundRectView.swift in Sources */,
 				DBBF50131B80A52A00759C40 /* ScoreSliderView.swift in Sources */,
 				DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */,
 				DBE0691B1B7F6F4600E6CA3F /* Theme.swift in Sources */,
