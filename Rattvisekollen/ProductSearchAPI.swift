@@ -15,7 +15,10 @@ class ProductSearchAPI: NSObject {
         let url = urlFromCode(code)
 
         let task = session.dataTaskWithURL(url) { data, response, error -> Void in
-            callback(product: Product.dummyProduct(), error: nil)
+            dispatch_async(dispatch_get_main_queue(), {
+                callback(product: Product.dummyProduct(), error: nil)
+            })
+            
 //            if (error != nil) {
 //                callback(product: nil, error: error)
 //            } else {

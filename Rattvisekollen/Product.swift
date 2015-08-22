@@ -29,7 +29,7 @@ class Product: NSObject {
     class func dummyProduct() -> Product {
         let data = ["barcode" : "7340005403622",
                     "name" : "Chirre fan",
-                    "manufacutrer" : "OLW",
+                    "manufacturer" : "OLW",
                     "origin":  "Swärje",
                     "ingredients" : ["potatis", "salt", "fett"]]
         return Product(jsonData: data as NSDictionary)

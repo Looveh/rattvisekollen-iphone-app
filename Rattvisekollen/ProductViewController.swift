@@ -10,7 +10,9 @@ import UIKit
 
 class ProductViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    class func pushFromViewController(parent: UIViewController, forProductCode product: NSString) {
+    @IBOutlet weak var parallaxHeaderView: ParallaxHeaderView!
+
+    class func pushFromViewController(parent: UIViewController, forProduct product: Product) {
         let storyboard = UIStoryboard(name: "Product", bundle: nil)
         let productViewController = storyboard.instantiateViewControllerWithIdentifier("ProductViewController")
         parent.navigationController?.showViewController(productViewController, sender: parent)
@@ -18,6 +20,7 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.parallaxHeaderView.install()
     }
     
     // MARK: UITableViewDataSource
@@ -42,4 +45,8 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     // MARK: UITableViewDelegate
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        self.parallaxHeaderView.layoutForScrollOffset(scrollView.contentOffset)
+    }
 }

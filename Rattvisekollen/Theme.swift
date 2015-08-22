@@ -12,12 +12,13 @@ class Theme: NSObject {
     
     class func setupAppearance(window: UIWindow) {
         window.tintColor = self.primaryColor()
-        
+
         let navbarAppearance = UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self])
         navbarAppearance.setBackgroundImage(self.resizableImageWithColor(self.primaryColor()), forBarMetrics: UIBarMetrics.Default)
         navbarAppearance.shadowImage = UIImage()
         navbarAppearance.tintColor = self.backgroundColor()
         navbarAppearance.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.whiteColor() ]
+        navbarAppearance.translucent = false
         
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
     }
@@ -43,9 +44,9 @@ class Theme: NSObject {
     }
     
     class func resizableImageWithColor(color: UIColor) -> UIImage {
-        UIGraphicsBeginImageContext(CGSize(width: 100, height: 100))
+        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         color.setFill()
-        UIRectFill(CGRect(x: 0, y: 0, width: 100, height: 100))
+        UIRectFill(CGRect(x: 0, y: 0, width: 1, height: 1))
         let image = UIGraphicsGetImageFromCurrentImageContext().resizableImageWithCapInsets(UIEdgeInsetsZero, resizingMode: UIImageResizingMode.Stretch)
         UIGraphicsEndImageContext()
         return image

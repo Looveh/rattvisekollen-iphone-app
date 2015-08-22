@@ -16,29 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pn1-b8-2cB" userLabel="Header view" customClass="ParallaxHeaderView" customModule="Rattvisekollen" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produktnamn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogS-GV-y8Z">
+                                        <rect key="frame" x="20" y="124" width="126.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.9882352941176471" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39X-2f-BFS">
+                                        <rect key="frame" x="272.5" y="57.5" width="54" height="45.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
+                                        <color key="textColor" red="1" green="0.94509804248809814" blue="0.83529412746429443" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.37254902720451355" green="0.47058823704719543" blue="0.69803923368453979" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="96N-tP-bPE"/>
+                                    <constraint firstAttribute="bottom" secondItem="ogS-GV-y8Z" secondAttribute="bottom" constant="12" id="Dgd-Pf-Amu"/>
+                                    <constraint firstItem="ogS-GV-y8Z" firstAttribute="leading" secondItem="Pn1-b8-2cB" secondAttribute="leading" constant="20" id="Dkd-AN-Hg2"/>
+                                    <constraint firstItem="39X-2f-BFS" firstAttribute="centerX" secondItem="Pn1-b8-2cB" secondAttribute="centerX" id="IlU-w4-xI7"/>
+                                    <constraint firstItem="39X-2f-BFS" firstAttribute="centerY" secondItem="Pn1-b8-2cB" secondAttribute="centerY" id="RnC-m1-YY3"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xgw-dd-EVw">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="Pn1-b8-2cB" userLabel="Header view">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="169"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="8ds-gn-5s1" userLabel="Transparent header">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="160"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produktnamn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogS-GV-y8Z">
-                                            <rect key="frame" x="20" y="133" width="127" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                            <color key="textColor" red="1" green="0.9882352941176471" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.37254901960784315" green="0.47058823529411764" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="ogS-GV-y8Z" secondAttribute="bottom" constant="12" id="Dgd-Pf-Amu"/>
-                                        <constraint firstItem="ogS-GV-y8Z" firstAttribute="leading" secondItem="Pn1-b8-2cB" secondAttribute="leading" constant="20" id="Dkd-AN-Hg2"/>
-                                    </constraints>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="summaryCell" id="apj-PG-aOY" userLabel="Summary Cell">
-                                        <rect key="frame" x="0.0" y="197" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="188" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="apj-PG-aOY" id="pXg-aE-lIs">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -46,7 +59,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ingredientCell" id="lRI-Hs-n8i" userLabel="Ingredient cell">
-                                        <rect key="frame" x="0.0" y="241" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="232" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lRI-Hs-n8i" id="v8B-Br-XbK">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -65,12 +78,16 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Xgw-dd-EVw" secondAttribute="trailing" id="1HH-QE-0DW"/>
                             <constraint firstItem="Xgw-dd-EVw" firstAttribute="leading" secondItem="tz6-L4-dE9" secondAttribute="leading" id="4b5-mL-9Xg"/>
+                            <constraint firstItem="Pn1-b8-2cB" firstAttribute="leading" secondItem="tz6-L4-dE9" secondAttribute="leading" id="Dly-oz-uFt"/>
+                            <constraint firstAttribute="trailing" secondItem="Pn1-b8-2cB" secondAttribute="trailing" id="exx-gg-i60"/>
                             <constraint firstItem="Xgw-dd-EVw" firstAttribute="top" secondItem="KbN-lc-sYT" secondAttribute="bottom" id="k9M-Rt-uqf"/>
                             <constraint firstItem="fPE-tH-6vq" firstAttribute="top" secondItem="Xgw-dd-EVw" secondAttribute="bottom" id="ooA-Lj-H6L"/>
+                            <constraint firstItem="Pn1-b8-2cB" firstAttribute="top" secondItem="KbN-lc-sYT" secondAttribute="bottom" id="zcS-37-g8g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O4L-Ig-sNe"/>
                     <connections>
+                        <outlet property="parallaxHeaderView" destination="Pn1-b8-2cB" id="cH0-O4-leP"/>
                         <outlet property="view" destination="tz6-L4-dE9" id="Dj6-Xm-FzK"/>
                     </connections>
                 </viewController>

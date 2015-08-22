@@ -11,6 +11,7 @@
 		DB2624631B88AB95008EAAA4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2624621B88AB95008EAAA4 /* Product.swift */; };
 		DB3F44BD1B80EBF300EB85B3 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F44BC1B80EBF300EB85B3 /* CircleView.swift */; };
 		DB3F44BF1B80F49A00EB85B3 /* RoundRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F44BE1B80F49A00EB85B3 /* RoundRectView.swift */; };
+		DB4860CA1B88B6F700C4279E /* ParallaxHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860C91B88B6F700C4279E /* ParallaxHeaderView.swift */; };
 		DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */; };
 		DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78921B7F32AD00371C1C /* AppDelegate.swift */; };
 		DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78941B7F32AD00371C1C /* StartViewController.swift */; };
@@ -22,8 +23,6 @@
 		DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78C31B7F37E800371C1C /* ScanViewController.swift */; };
 		DBBF500E1B809AE100759C40 /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBF500D1B809AE100759C40 /* Scanner.storyboard */; };
 		DBBF50111B809E4500759C40 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBF50101B809E4500759C40 /* Product.storyboard */; };
-		DBBF50131B80A52A00759C40 /* ScoreSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF50121B80A52A00759C40 /* ScoreSliderView.swift */; };
-		DBBF50151B80A57F00759C40 /* ScoreSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF50141B80A57F00759C40 /* ScoreSliderView.xib */; };
 		DBBF50171B80AA7400759C40 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF50161B80AA7400759C40 /* ProductViewController.swift */; };
 		DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */; };
 		DBE0691B1B7F6F4600E6CA3F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0691A1B7F6F4600E6CA3F /* Theme.swift */; };
@@ -51,6 +50,7 @@
 		DB2624621B88AB95008EAAA4 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DB3F44BC1B80EBF300EB85B3 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		DB3F44BE1B80F49A00EB85B3 /* RoundRectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRectView.swift; sourceTree = "<group>"; };
+		DB4860C91B88B6F700C4279E /* ParallaxHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderView.swift; sourceTree = "<group>"; };
 		DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewModalAnimation.swift; sourceTree = "<group>"; };
 		DBBE788F1B7F32AD00371C1C /* Rattvisekollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rattvisekollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBE78921B7F32AD00371C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +68,6 @@
 		DBBE78C31B7F37E800371C1C /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = ../../rattvisekollen/Rattvisekollen/ScanViewController.swift; sourceTree = "<group>"; };
 		DBBF500D1B809AE100759C40 /* Scanner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
 		DBBF50101B809E4500759C40 /* Product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
-		DBBF50121B80A52A00759C40 /* ScoreSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreSliderView.swift; sourceTree = "<group>"; };
-		DBBF50141B80A57F00759C40 /* ScoreSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreSliderView.xib; sourceTree = "<group>"; };
 		DBBF50161B80AA7400759C40 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		DBC06B5F1B7F418A009604EB /* BarcodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
 		DBE0691A1B7F6F4600E6CA3F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -204,8 +202,6 @@
 			children = (
 				DBBF50101B809E4500759C40 /* Product.storyboard */,
 				DBBF50161B80AA7400759C40 /* ProductViewController.swift */,
-				DBBF50121B80A52A00759C40 /* ScoreSliderView.swift */,
-				DBBF50141B80A57F00759C40 /* ScoreSliderView.xib */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -216,6 +212,7 @@
 				DBE0691A1B7F6F4600E6CA3F /* Theme.swift */,
 				DB3F44BC1B80EBF300EB85B3 /* CircleView.swift */,
 				DB3F44BE1B80F49A00EB85B3 /* RoundRectView.swift */,
+				DB4860C91B88B6F700C4279E /* ParallaxHeaderView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -328,7 +325,6 @@
 				DBBF500E1B809AE100759C40 /* Scanner.storyboard in Resources */,
 				DBBE789A1B7F32AD00371C1C /* Assets.xcassets in Resources */,
 				DBBE78981B7F32AD00371C1C /* Start.storyboard in Resources */,
-				DBBF50151B80A57F00759C40 /* ScoreSliderView.xib in Resources */,
 				DBBF50111B809E4500759C40 /* Product.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,13 +354,13 @@
 				DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */,
 				DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */,
 				DB3F44BF1B80F49A00EB85B3 /* RoundRectView.swift in Sources */,
-				DBBF50131B80A52A00759C40 /* ScoreSliderView.swift in Sources */,
 				DB2624631B88AB95008EAAA4 /* Product.swift in Sources */,
 				DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */,
 				DBE0691B1B7F6F4600E6CA3F /* Theme.swift in Sources */,
 				DB2624611B88A5F5008EAAA4 /* ProductSearchAPI.swift in Sources */,
 				DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */,
 				DBBF50171B80AA7400759C40 /* ProductViewController.swift in Sources */,
+				DB4860CA1B88B6F700C4279E /* ParallaxHeaderView.swift in Sources */,
 				DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

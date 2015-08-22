@@ -36,7 +36,14 @@ class StartViewController: UIViewController, ScanViewControllerDelegate {
     // MARK: ScanViewControllerDelegate
     
     func scanViewController(scanViewController: ScanViewController, foundBarcode barcode: String) {
-        ProductViewController.pushFromViewController(self, forProductCode: barcode)
+        ProductSearchAPI.findProductWithCode(barcode) { (product, error) -> Void in
+            if let product = product {
+                ProductViewController.pushFromViewController(self, forProduct: product)
+            } else {
+                print(error)
+            }
+        }
+        
     }
 }
 
