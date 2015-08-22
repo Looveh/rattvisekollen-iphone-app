@@ -14,13 +14,13 @@ class StartViewController: UIViewController, ScanViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = Theme.darkGreen()
+        self.view.backgroundColor = Theme.backgroundColor()
         self.setupButton()
     }
     
     func setupButton() {
         self.barcodeButton.layer.borderWidth = 1.0
-        self.barcodeButton.layer.borderColor = Theme.darkGreen().CGColor
+        self.barcodeButton.layer.borderColor = Theme.primaryColor().CGColor
     }
     
     @IBAction func scanningButtonPressed(sender: AnyObject) {

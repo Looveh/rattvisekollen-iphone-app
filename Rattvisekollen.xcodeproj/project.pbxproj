@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2624611B88A5F5008EAAA4 /* ProductSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2624601B88A5F5008EAAA4 /* ProductSearchAPI.swift */; };
+		DB2624631B88AB95008EAAA4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2624621B88AB95008EAAA4 /* Product.swift */; };
 		DB3F44BD1B80EBF300EB85B3 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F44BC1B80EBF300EB85B3 /* CircleView.swift */; };
 		DB3F44BF1B80F49A00EB85B3 /* RoundRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F44BE1B80F49A00EB85B3 /* RoundRectView.swift */; };
 		DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB2624601B88A5F5008EAAA4 /* ProductSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchAPI.swift; sourceTree = "<group>"; };
+		DB2624621B88AB95008EAAA4 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DB3F44BC1B80EBF300EB85B3 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		DB3F44BE1B80F49A00EB85B3 /* RoundRectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRectView.swift; sourceTree = "<group>"; };
 		DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewModalAnimation.swift; sourceTree = "<group>"; };
@@ -96,6 +100,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB26245E1B88A5C6008EAAA4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DB26245F1B88A5D4008EAAA4 /* Product */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		DB26245F1B88A5D4008EAAA4 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				DB2624601B88A5F5008EAAA4 /* ProductSearchAPI.swift */,
+				DB2624621B88AB95008EAAA4 /* Product.swift */,
+			);
+			name = Product;
+			sourceTree = "<group>";
+		};
 		DBBE78861B7F32AD00371C1C = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DBBE78921B7F32AD00371C1C /* AppDelegate.swift */,
+				DB26245E1B88A5C6008EAAA4 /* API */,
 				DBE069191B7F6F3700E6CA3F /* UI */,
 				DBBE78C01B7F37A900371C1C /* Start */,
 				DBBE78C11B7F37AF00371C1C /* Scanning */,
@@ -337,8 +359,10 @@
 				DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */,
 				DB3F44BF1B80F49A00EB85B3 /* RoundRectView.swift in Sources */,
 				DBBF50131B80A52A00759C40 /* ScoreSliderView.swift in Sources */,
+				DB2624631B88AB95008EAAA4 /* Product.swift in Sources */,
 				DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */,
 				DBE0691B1B7F6F4600E6CA3F /* Theme.swift in Sources */,
+				DB2624611B88A5F5008EAAA4 /* ProductSearchAPI.swift in Sources */,
 				DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */,
 				DBBF50171B80AA7400759C40 /* ProductViewController.swift in Sources */,
 				DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */,
@@ -487,6 +511,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Rattvisekollen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = se.rattvisa.Rattvisekollen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -501,6 +526,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Rattvisekollen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = se.rattvisa.Rattvisekollen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

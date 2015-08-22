@@ -37,7 +37,6 @@ class ScoreSliderView: UIView {
         self.scoreSlideBar.backgroundColor = self.color?.colorWithAlphaComponent(0.7)
         self.scoreSlideBar.transform = CGAffineTransformMakeScale(0.0, 1.0)
         self.scoreLabel.text = self.score?.description
-
     }
     
     func animateSlideWithDelay(delay: NSTimeInterval) {

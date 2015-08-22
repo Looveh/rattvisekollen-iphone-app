@@ -16,6 +16,7 @@ protocol ScanViewControllerDelegate: class {
 
 class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControllerTransitioningDelegate {
     
+    // MARK: Properties
     internal weak var delegate: ScanViewControllerDelegate?
     
     @IBOutlet weak var cameraLayerView: UIView!
@@ -28,6 +29,8 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
     internal var maskView: UIView!
     var barcodeScanner: BarcodeScanner!
     var foundBarcode: Bool = false
+    
+    // MARK: Methods
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -47,6 +50,7 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
         self.barcodeScanner = BarcodeScanner(previewView: self.cameraLayerView, delegate: self)
         self.setupMaskView()
         self.setupCloseButton()
+        self.setupDebugScanTouching()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -73,8 +77,8 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
     func setupCloseButton() {
         self.closeButton.layer.cornerRadius = 4.0
         self.closeButton.layer.borderWidth = 0.5
-        self.closeButton.layer.borderColor = Theme.green().CGColor
-        self.closeButton.setTitleColor(Theme.darkGreen(), forState: UIControlState.Normal)
+        self.closeButton.layer.borderColor = Theme.lightColor().CGColor
+        self.closeButton.setTitleColor(Theme.primaryColor(), forState: UIControlState.Normal)
         self.closeButton.backgroundColor = Theme.backgroundColor()
     }
     
@@ -89,6 +93,18 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
     override func viewDidLayoutSubviews() {
         super.viewWillLayoutSubviews()
         self.maskView.frame = self.maskViewPositionView.frame
+    }
+    
+    func setupDebugScanTouching() {
+        #if DEBUG
+            let longPress = UILongPressGestureRecognizer(target: self, action: "debugLongPress:")
+            self.infoLabel.addGestureRecognizer(longPress)
+            self.infoLabel.userInteractionEnabled = true
+        #endif
+    }
+    
+    func debugLongPress(sender: AnyObject) {
+        self.showFlashAndCompleteScanningWithBarcode("7340005403622")
     }
     
     // MARK: Actions
@@ -121,15 +137,16 @@ class ScanViewController: UIViewController, BarcodeOutputDelegate, UIViewControl
         self.scanFlashLabel.text = barcode
         self.scanFlashLabel.alpha = 1.0
 
-        UIView.animateWithDuration(0.8, animations: { () -> Void in
+        UIView.animateWithDuration(0.8, animations: {
             self.scanFlashLabel.alpha = 0.0
-
-            }) { (_) -> Void in
-                self.dismissViewControllerAnimated(true) { () -> Void in
-                    self.delegate?.scanViewController(self, foundBarcode: barcode)
-                }
-        }
+        }, completion: { finished in
+            self.scanFlashLabel.hidden = true
+            self.dismissViewControllerAnimated(true) {
+                self.delegate?.scanViewController(self, foundBarcode: barcode)
+            }
+        })
     }
+    
     
     // MARK : UIViewControllerTransitioningDelegate
     

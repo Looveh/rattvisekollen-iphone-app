@@ -8,12 +8,7 @@
 
 import UIKit
 
-class ProductViewController: UIViewController {
-
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var scoreSliderStackView: UIStackView!
-    
-    var sliders: [ScoreSliderView]?
+class ProductViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     class func pushFromViewController(parent: UIViewController, forProductCode product: NSString) {
         let storyboard = UIStoryboard(name: "Product", bundle: nil)
@@ -23,33 +18,28 @@ class ProductViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = Theme.darkGreen()
-        self.setupScoreSliders()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-
-        var delay = 0.15
-        for slider: ScoreSliderView in self.sliders! {
-            slider.animateSlideWithDelay(delay)
-            delay += 0.10
+    // MARK: UITableViewDataSource
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0: return 1
+        case 1: return 3
+        default: return 0
         }
     }
     
-    func setupScoreSliders() {
-        let c1 = UIColor(red: 113.0/255, green: 160.0/255, blue: 113.0/255, alpha: 1.0)
-        let c2 = UIColor(red: 83.0/255, green: 113.0/255, blue: 151.0/255, alpha: 1.0)
-        let c3 = UIColor(red: 52.0/255, green: 70.0/255, blue: 92.0/255, alpha: 1.0)
-        let slider1 = ScoreSliderView.sliderWithScore(4, color: c1)
-        let slider2 = ScoreSliderView.sliderWithScore(8, color: c2)
-        let slider3 = ScoreSliderView.sliderWithScore(3, color: c3)
-
-        self.scoreSliderStackView.addArrangedSubview(slider1)
-        self.scoreSliderStackView.addArrangedSubview(slider2)
-        self.scoreSliderStackView.addArrangedSubview(slider3)
-        self.scoreSliderStackView.layoutIfNeeded()
-        
-        self.sliders = [slider1, slider2, slider3]
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if (indexPath.section == 0) {
+            return tableView.dequeueReusableCellWithIdentifier("summaryCell")!
+        }
+        return tableView.dequeueReusableCellWithIdentifier("ingredientCell")!
     }
+    
+    // MARK: UITableViewDelegate
 }
