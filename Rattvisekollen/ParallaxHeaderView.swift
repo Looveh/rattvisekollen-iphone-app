@@ -13,6 +13,9 @@ class ParallaxHeaderView: UIView {
     var heightConstraint: NSLayoutConstraint?
     var baseHeight: CGFloat = 0.0
 
+    var visible: Bool = true
+    var contentVisibilityHandler: ((visible: Bool) -> Void)?
+
     internal func install() {
         for constraint in self.constraints {
             if (constraint.firstItem as! NSObject) == self && constraint.firstAttribute == .Height {
@@ -32,6 +35,14 @@ class ParallaxHeaderView: UIView {
 
         for view in self.subviews {
             view.alpha = alpha
+        }
+
+        if (alpha < 0.01 && self.visible) {
+            self.visible = false
+            self.contentVisibilityHandler?(visible: false)
+        } else if (alpha > 0.05 && !self.visible) {
+            self.visible = true
+            self.contentVisibilityHandler?(visible: true)
         }
     }
 }

@@ -27,11 +27,36 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupTitleView()
         self.productNameLabel.text = self.product!.name
         self.parallaxHeaderView.install()
+        self.parallaxHeaderView.contentVisibilityHandler = self.setNavbarTitleVisible
         
         self.tableView.registerNib(UINib(nibName: "IngredientsHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ingredientsHeaderView");
         self.tableView.registerNib(UINib(nibName: "IngredientsFooterView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ingredientsFooterView");
+    }
+
+    // MARK: Parallax handler
+    
+    func setupTitleView() {
+        let title = UILabel()
+        title.text = self.product?.name
+        title.font = UIFont.boldSystemFontOfSize(17)
+        title.textColor = self.navigationController?.navigationBar.tintColor
+        title.sizeToFit()
+        title.hidden = true
+        self.navigationItem.titleView = title
+    }
+    
+    func setNavbarTitleVisible(parallaxContentVisible: Bool) {
+        if (!parallaxContentVisible) {
+            self.navigationItem.titleView?.hidden = false
+            self.navigationItem.titleView?.alpha = 0.0
+        }
+
+        UIView.animateWithDuration(0.3) { () -> Void in
+            self.navigationItem.titleView?.alpha = !parallaxContentVisible ? 1.0 : 0.0
+        }
     }
     
     // MARK: UITableViewDataSource
