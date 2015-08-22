@@ -14,6 +14,7 @@ class StartViewController: UIViewController, ScanViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.backBarButtonItem = Theme.emptyTitleBackButton()
         self.view.backgroundColor = Theme.backgroundColor()
         self.setupButton()
     }

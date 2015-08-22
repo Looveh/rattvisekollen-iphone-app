@@ -51,4 +51,8 @@ class Theme: NSObject {
         UIGraphicsEndImageContext()
         return image
     }
+    
+    class func emptyTitleBackButton() -> UIBarButtonItem {
+        return UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+    }
 }
