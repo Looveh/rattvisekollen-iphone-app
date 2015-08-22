@@ -31,7 +31,7 @@ class Product: NSObject {
                     "name" : "Chirre fan",
                     "manufacturer" : "OLW",
                     "origin":  "Swärje",
-                    "ingredients" : ["potatis", "salt", "fett"]]
+                    "ingredients" : ["potatis", "salt", "fett", "mer salt", "socker", "sprit", "rost frånt fabriken"]]
         return Product(jsonData: data as NSDictionary)
     }
 }

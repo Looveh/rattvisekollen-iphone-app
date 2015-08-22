@@ -2,17 +2,42 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8173.3"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UITableViewHeaderFooterView">
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="UITableViewHeaderFooterView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaQ-zB-jcA" customClass="RoundRectView" customModule="Rattvisekollen" customModuleProvider="target">
-                    <rect key="frame" x="12" y="-4" width="296" height="48"/>
+                    <rect key="frame" x="12" y="-4" width="296" height="54"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Hp-Ie-eUd" userLabel="Line">
+                            <rect key="frame" x="10" y="0.0" width="1" height="50"/>
+                            <color key="backgroundColor" red="0.37254902719999999" green="0.47058823700000002" blue="0.69803923369999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="l5u-i8-s2R"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nib-ku-EEk" customClass="CircleView" customModule="Rattvisekollen" customModuleProvider="target">
+                            <rect key="frame" x="8.5" y="48" width="4" height="4"/>
+                            <color key="backgroundColor" red="0.37254902719999999" green="0.47058823700000002" blue="0.69803923369999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="4" id="NIp-aF-Ikn"/>
+                                <constraint firstAttribute="height" constant="4" id="ixo-46-kbH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="nib-ku-EEk" firstAttribute="centerY" secondItem="0Hp-Ie-eUd" secondAttribute="bottom" id="A7J-Yh-cLA"/>
+                        <constraint firstAttribute="bottom" secondItem="0Hp-Ie-eUd" secondAttribute="bottom" constant="4" id="Ac4-4f-5dg"/>
+                        <constraint firstItem="0Hp-Ie-eUd" firstAttribute="leading" secondItem="aaQ-zB-jcA" secondAttribute="leading" constant="10" id="T8Z-NS-J4F"/>
+                        <constraint firstItem="0Hp-Ie-eUd" firstAttribute="top" secondItem="aaQ-zB-jcA" secondAttribute="top" id="Z4P-Dt-SFk"/>
+                        <constraint firstItem="nib-ku-EEk" firstAttribute="centerX" secondItem="0Hp-Ie-eUd" secondAttribute="centerX" id="pcI-0C-bH3"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="4"/>
@@ -24,7 +49,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="aaQ-zB-jcA" secondAttribute="trailing" constant="12" id="Bl8-bt-HoU"/>
                 <constraint firstItem="aaQ-zB-jcA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-4" id="ZEU-7w-Go3"/>
-                <constraint firstAttribute="bottom" secondItem="aaQ-zB-jcA" secondAttribute="bottom" constant="6" id="iiQ-In-0s4"/>
+                <constraint firstAttribute="bottom" secondItem="aaQ-zB-jcA" secondAttribute="bottom" id="iiQ-In-0s4"/>
                 <constraint firstItem="aaQ-zB-jcA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="lQb-VQ-S45"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

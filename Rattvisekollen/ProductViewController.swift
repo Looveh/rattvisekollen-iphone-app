@@ -64,7 +64,7 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
         if (indexPath.section == 0) {
             return 160
         }
-        return 30
+        return 25
     }
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -82,11 +82,11 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 1 ? 50 : 0
+        return section == 1 ? 40 : 0
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return section == 1 ? 20 : 0
+        return section == 1 ? 8 : 0
     }
     
     // MARK: UIScrollViewDelegate

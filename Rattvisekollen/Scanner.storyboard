@@ -60,7 +60,7 @@
                                     <constraint firstAttribute="height" constant="45" id="GCq-yP-za9"/>
                                 </constraints>
                                 <state key="normal" title="Avbryt">
-                                    <color key="titleColor" red="0.55637231600000003" green="1" blue="0.67146466169999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.37254902719999999" green="0.47058823700000002" blue="0.69803923369999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="xSs-hL-ROL" eventType="touchUpInside" id="3zS-uJ-atU"/>

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,19 +11,39 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaQ-zB-jcA" customClass="RoundRectView" customModule="Rattvisekollen" customModuleProvider="target">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaQ-zB-jcA" customClass="RoundRectView" customModule="Rattvisekollen" customModuleProvider="target">
                     <rect key="frame" x="12" y="6" width="296" height="48"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredienser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIy-2L-8aJ">
-                            <rect key="frame" x="12" y="13.5" width="90.5" height="19.5"/>
+                            <rect key="frame" x="20" y="14.5" width="90.5" height="19.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" red="0.37254902720451355" green="0.47058823704719543" blue="0.69803923368453979" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRf-Kl-1EF" userLabel="Line">
+                            <rect key="frame" x="10" y="24.5" width="1" height="23"/>
+                            <color key="backgroundColor" red="0.37254902720451355" green="0.47058823704719543" blue="0.69803923368453979" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="TPe-pI-kd4"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Tt-jg-cBJ" userLabel="Circle" customClass="CircleView" customModule="Rattvisekollen" customModuleProvider="target">
+                            <rect key="frame" x="7" y="21" width="7" height="7"/>
+                            <color key="backgroundColor" red="0.37254902720451355" green="0.47058823704719543" blue="0.69803923368453979" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="7" id="7Eo-Ho-Zji"/>
+                                <constraint firstAttribute="width" constant="7" id="DBh-bo-VmW"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="vIy-2L-8aJ" firstAttribute="leading" secondItem="aaQ-zB-jcA" secondAttribute="leading" constant="12" id="FXC-cg-MWA"/>
+                        <constraint firstAttribute="bottom" secondItem="hRf-Kl-1EF" secondAttribute="bottom" id="3XR-w1-zGI"/>
+                        <constraint firstItem="vIy-2L-8aJ" firstAttribute="leading" secondItem="aaQ-zB-jcA" secondAttribute="leading" constant="20" id="FXC-cg-MWA"/>
+                        <constraint firstItem="0Tt-jg-cBJ" firstAttribute="centerY" secondItem="hRf-Kl-1EF" secondAttribute="top" id="PGJ-uV-gUj"/>
+                        <constraint firstItem="hRf-Kl-1EF" firstAttribute="leading" secondItem="aaQ-zB-jcA" secondAttribute="leading" constant="10" id="PaO-Bt-mrd"/>
+                        <constraint firstItem="hRf-Kl-1EF" firstAttribute="top" secondItem="vIy-2L-8aJ" secondAttribute="centerY" id="bAs-9e-dgX"/>
+                        <constraint firstItem="0Tt-jg-cBJ" firstAttribute="centerX" secondItem="hRf-Kl-1EF" secondAttribute="centerX" id="my7-67-MlF"/>
                         <constraint firstItem="vIy-2L-8aJ" firstAttribute="centerY" secondItem="aaQ-zB-jcA" secondAttribute="centerY" id="pKw-Qz-Zap"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
