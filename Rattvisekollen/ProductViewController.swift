@@ -83,7 +83,13 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBAction func showLabelsButtonPressed(sender: UIButton) {
         self.labelsShowing = !self.labelsShowing
-        self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
+
+        UIView.animateWithDuration(0.3) {
+            self.parallaxHeaderView.layoutForScrollOffset(self.tableView.contentOffset)
+            self.parallaxHeaderView.layoutIfNeeded()
+        }
 
         UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .CurveEaseInOut, animations: {
             self.labelThumbnailStackView.transform = self.labelsShowing ? CGAffineTransformMakeScale(1.1, 1.1) : CGAffineTransformIdentity
@@ -100,7 +106,7 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0: return self.labelsShowing ? 1 : 0
+        case 0: return 1// self.labelsShowing ? 1 : 0
         case 1: return self.product!.ingredients.count
         default: return 0
         }
@@ -122,9 +128,9 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.section == 0) {
-            return 200
+            return self.labelsShowing ? 200 : 0.0
         }
-        return 25
+        return 20
     }
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -133,20 +139,9 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
         }
         return nil
     }
-
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        if (section == 1) {
-            return tableView.dequeueReusableHeaderFooterViewWithIdentifier("ingredientsFooterView")
-        }
-        return nil
-    }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == 1 ? 40 : 0
-    }
-    
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return section == 1 ? 8 : 0
     }
     
     // MARK: UIScrollViewDelegate

@@ -117,51 +117,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBN-t9-rAB" userLabel="Paper">
-                                                    <rect key="frame" x="12" y="0.0" width="576" height="44"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWC-VS-fHe" userLabel="Line V">
-                                                            <rect key="frame" x="10" y="0.0" width="1" height="44"/>
-                                                            <color key="backgroundColor" red="0.37254902719999999" green="0.47058823700000002" blue="0.69803923369999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="1" id="Rgl-XL-la0"/>
-                                                            </constraints>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17c-gl-GCy" userLabel="Line H">
-                                                            <rect key="frame" x="11" y="21" width="16" height="1"/>
-                                                            <color key="backgroundColor" red="0.37254902719999999" green="0.47058823700000002" blue="0.69803923369999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="16" id="DFO-dM-9Ba"/>
-                                                                <constraint firstAttribute="height" constant="1" id="ekT-iP-RXv"/>
-                                                            </constraints>
-                                                        </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient placeholder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw9-g2-v6y">
-                                                            <rect key="frame" x="39" y="14" width="135" height="16"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                                                            <color key="textColor" red="0.37254902720451355" green="0.47058823704719543" blue="0.69803923368453979" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="MWC-VS-fHe" secondAttribute="bottom" id="HPj-ua-2Qj"/>
-                                                        <constraint firstItem="nw9-g2-v6y" firstAttribute="centerY" secondItem="iBN-t9-rAB" secondAttribute="centerY" id="Qhi-p6-XRd"/>
-                                                        <constraint firstItem="nw9-g2-v6y" firstAttribute="leading" secondItem="17c-gl-GCy" secondAttribute="trailing" constant="12" id="S3J-Yl-lNF"/>
-                                                        <constraint firstItem="MWC-VS-fHe" firstAttribute="top" secondItem="iBN-t9-rAB" secondAttribute="top" id="cYx-4b-yPe"/>
-                                                        <constraint firstItem="17c-gl-GCy" firstAttribute="leading" secondItem="MWC-VS-fHe" secondAttribute="trailing" id="g8i-Pz-c4Y"/>
-                                                        <constraint firstItem="MWC-VS-fHe" firstAttribute="leading" secondItem="iBN-t9-rAB" secondAttribute="leading" constant="10" id="hVs-so-lL2"/>
-                                                        <constraint firstItem="17c-gl-GCy" firstAttribute="centerY" secondItem="iBN-t9-rAB" secondAttribute="centerY" id="uvK-Rj-sZB"/>
-                                                    </constraints>
-                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient placeholder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw9-g2-v6y">
+                                                    <rect key="frame" x="20" y="13.5" width="144" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" red="0.37254902720451355" green="0.47058823704719543" blue="0.69803923368453979" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="iBN-t9-rAB" firstAttribute="leading" secondItem="v8B-Br-XbK" secondAttribute="leading" constant="12" id="0cm-S6-9X2"/>
-                                                <constraint firstAttribute="bottom" secondItem="iBN-t9-rAB" secondAttribute="bottom" id="9IX-Vr-6vd"/>
-                                                <constraint firstAttribute="trailing" secondItem="iBN-t9-rAB" secondAttribute="trailing" constant="12" id="V23-dF-1GM"/>
-                                                <constraint firstItem="iBN-t9-rAB" firstAttribute="top" secondItem="v8B-Br-XbK" secondAttribute="top" id="aUE-Yr-o5o"/>
+                                                <constraint firstItem="nw9-g2-v6y" firstAttribute="leading" secondItem="v8B-Br-XbK" secondAttribute="leading" constant="20" id="UIT-xf-3QO"/>
+                                                <constraint firstItem="nw9-g2-v6y" firstAttribute="centerY" secondItem="v8B-Br-XbK" secondAttribute="centerY" id="q60-cZ-W09"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.9882352941176471" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="ingredientLabel" destination="nw9-g2-v6y" id="Wyd-hY-tFb"/>
                                         </connections>
