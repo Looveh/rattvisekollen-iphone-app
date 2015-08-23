@@ -41,7 +41,7 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
         
         
         self.tableView.registerNib(UINib(nibName: "IngredientsHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ingredientsHeaderView");
-        self.tableView.registerNib(UINib(nibName: "IngredientsFooterView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ingredientsFooterView");
+//        self.tableView.registerNib(UINib(nibName: "IngredientsFooterView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ingredientsFooterView");
     }
 
     // MARK: Parallax header
@@ -146,14 +146,14 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if (ProductSection(rawValue: section) == .Ingredients) {
+        if ProductSection(rawValue: section) == .Ingredients {
             return tableView.dequeueReusableHeaderFooterViewWithIdentifier("ingredientsHeaderView")
         }
         return nil
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if (ProductSection(rawValue: section) == .Ingredients) {
+        if ProductSection(rawValue: section) == .Ingredients {
             return 40
         }
         return 0
