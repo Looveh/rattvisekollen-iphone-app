@@ -29,7 +29,6 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         self.setupTitleView()
         self.productNameLabel.text = self.product!.name
-        self.parallaxHeaderView.install()
         self.parallaxHeaderView.contentVisibilityHandler = self.setNavbarTitleVisible
         
         self.tableView.registerNib(UINib(nibName: "IngredientsHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ingredientsHeaderView");
@@ -75,10 +74,12 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if (indexPath.section == 0) {
-            return tableView.dequeueReusableCellWithIdentifier("summaryCell")!
+            let cell = tableView.dequeueReusableCellWithIdentifier("summaryCell") as! LabelsTableViewCell
+            cell.configureWithParent(self, labels: (self.product?.labels)!)
+            return cell
         }
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("ingredientCell") as! IngredientCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("IngredientTableViewCell") as! IngredientTableViewCell
         cell.configureWithIngredient(self.product!.ingredients[indexPath.row])
         return cell
     }
@@ -87,7 +88,7 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.section == 0) {
-            return 160
+            return 200
         }
         return 25
     }

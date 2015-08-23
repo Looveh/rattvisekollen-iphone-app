@@ -15,6 +15,7 @@ class Product: NSObject {
     let manufacturer: String
     let origin: String
     let ingredients: [String]
+    let labels: [Label]
 
     required init(jsonData: NSDictionary) {
         self.code = jsonData["barcode"] as! String
@@ -22,16 +23,6 @@ class Product: NSObject {
         self.manufacturer = jsonData["manufacturer"] as! String
         self.origin = jsonData["origin"] as! String
         self.ingredients = jsonData["ingredients"] as! [String]
-    }
-    
-    
-    
-    class func dummyProduct() -> Product {
-        let data = ["barcode" : "7340005403622",
-                    "name" : "Chirre fan",
-                    "manufacturer" : "OLW",
-                    "origin":  "Swärje",
-                    "ingredients" : ["potatis", "salt", "fett", "mer salt", "socker", "sprit", "rost frånt fabriken"]]
-        return Product(jsonData: data as NSDictionary)
+        self.labels = (jsonData["labels"] as! [String]).map({ Label.labelWithId($0) })
     }
 }

@@ -1,5 +1,5 @@
 //
-//  IngredientCell.swift
+//  IngredientTableViewCell.swift
 //  Rattvisekollen
 //
 //  Created by Fredrik Bystam on 22/08/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IngredientCell: UITableViewCell {
+class IngredientTableViewCell: UITableViewCell {
     
     @IBOutlet weak var ingredientLabel: UILabel!
     

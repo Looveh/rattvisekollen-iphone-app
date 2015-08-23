@@ -36,7 +36,7 @@ class Theme: NSObject {
     }
 
     class func backgroundColor() -> UIColor {
-        return color(255, g: 252, b: 248)
+        return color(255, g: 252, b: 250)
     }
     
     class func color(r: Int, g: Int, b: Int) -> UIColor {

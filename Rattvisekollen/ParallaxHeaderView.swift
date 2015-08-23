@@ -15,8 +15,10 @@ class ParallaxHeaderView: UIView {
 
     var visible: Bool = true
     var contentVisibilityHandler: ((visible: Bool) -> Void)?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
 
-    internal func install() {
         for constraint in self.constraints {
             if (constraint.firstItem as! NSObject) == self && constraint.firstAttribute == .Height {
                 self.heightConstraint = constraint

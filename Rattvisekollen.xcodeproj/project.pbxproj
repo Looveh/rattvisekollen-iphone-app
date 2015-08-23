@@ -14,7 +14,12 @@
 		DB4860CA1B88B6F700C4279E /* ParallaxHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860C91B88B6F700C4279E /* ParallaxHeaderView.swift */; };
 		DB4860CC1B88C3BB00C4279E /* IngredientsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4860CB1B88C3BB00C4279E /* IngredientsHeaderView.xib */; };
 		DB4860CE1B88C51700C4279E /* IngredientsFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4860CD1B88C51700C4279E /* IngredientsFooterView.xib */; };
-		DB4860D01B88C67500C4279E /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860CF1B88C67500C4279E /* IngredientCell.swift */; };
+		DB4860D01B88C67500C4279E /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860CF1B88C67500C4279E /* IngredientTableViewCell.swift */; };
+		DB4860D41B89EAE100C4279E /* LabelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860D31B89EAE100C4279E /* LabelCollectionViewController.swift */; };
+		DB4860D61B89EAFA00C4279E /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860D51B89EAFA00C4279E /* Label.swift */; };
+		DB4860D81B89EB8E00C4279E /* DebugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860D71B89EB8E00C4279E /* DebugData.swift */; };
+		DB4860DB1B89EC2A00C4279E /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860DA1B89EC2A00C4279E /* LabelCollectionViewCell.swift */; };
+		DB4860DD1B89F86E00C4279E /* LabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860DC1B89F86E00C4279E /* LabelsTableViewCell.swift */; };
 		DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */; };
 		DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78921B7F32AD00371C1C /* AppDelegate.swift */; };
 		DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78941B7F32AD00371C1C /* StartViewController.swift */; };
@@ -56,7 +61,12 @@
 		DB4860C91B88B6F700C4279E /* ParallaxHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderView.swift; sourceTree = "<group>"; };
 		DB4860CB1B88C3BB00C4279E /* IngredientsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientsHeaderView.xib; sourceTree = "<group>"; };
 		DB4860CD1B88C51700C4279E /* IngredientsFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientsFooterView.xib; sourceTree = "<group>"; };
-		DB4860CF1B88C67500C4279E /* IngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		DB4860CF1B88C67500C4279E /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
+		DB4860D31B89EAE100C4279E /* LabelCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewController.swift; sourceTree = "<group>"; };
+		DB4860D51B89EAFA00C4279E /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		DB4860D71B89EB8E00C4279E /* DebugData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugData.swift; sourceTree = "<group>"; };
+		DB4860DA1B89EC2A00C4279E /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB4860DC1B89F86E00C4279E /* LabelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsTableViewCell.swift; sourceTree = "<group>"; };
 		DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewModalAnimation.swift; sourceTree = "<group>"; };
 		DBBE788F1B7F32AD00371C1C /* Rattvisekollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rattvisekollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBE78921B7F32AD00371C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,11 +134,30 @@
 		DB4860D11B88C67E00C4279E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DB4860CF1B88C67500C4279E /* IngredientCell.swift */,
+				DB4860DC1B89F86E00C4279E /* LabelsTableViewCell.swift */,
+				DB4860CF1B88C67500C4279E /* IngredientTableViewCell.swift */,
 				DB4860CB1B88C3BB00C4279E /* IngredientsHeaderView.xib */,
 				DB4860CD1B88C51700C4279E /* IngredientsFooterView.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		DB4860D21B89EAC700C4279E /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				DB4860D51B89EAFA00C4279E /* Label.swift */,
+				DB4860D31B89EAE100C4279E /* LabelCollectionViewController.swift */,
+				DB4860DA1B89EC2A00C4279E /* LabelCollectionViewCell.swift */,
+			);
+			name = Labels;
+			sourceTree = "<group>";
+		};
+		DB4860D91B89EB9300C4279E /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				DB4860D71B89EB8E00C4279E /* DebugData.swift */,
+			);
+			name = Debug;
 			sourceTree = "<group>";
 		};
 		DBBE78861B7F32AD00371C1C = {
@@ -160,6 +189,7 @@
 				DBBE78C01B7F37A900371C1C /* Start */,
 				DBBE78C11B7F37AF00371C1C /* Scanning */,
 				DBBF500F1B809E2400759C40 /* Product */,
+				DB4860D91B89EB9300C4279E /* Debug */,
 				DBBE78C21B7F37BC00371C1C /* Resources */,
 			);
 			path = Rattvisekollen;
@@ -216,6 +246,7 @@
 		DBBF500F1B809E2400759C40 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				DB4860D21B89EAC700C4279E /* Labels */,
 				DB4860D11B88C67E00C4279E /* Views */,
 				DBBF50101B809E4500759C40 /* Product.storyboard */,
 				DBBF50161B80AA7400759C40 /* ProductViewController.swift */,
@@ -374,13 +405,18 @@
 				DBC06B601B7F418A009604EB /* BarcodeScanner.swift in Sources */,
 				DB3F44BF1B80F49A00EB85B3 /* RoundRectView.swift in Sources */,
 				DB2624631B88AB95008EAAA4 /* Product.swift in Sources */,
-				DB4860D01B88C67500C4279E /* IngredientCell.swift in Sources */,
+				DB4860D41B89EAE100C4279E /* LabelCollectionViewController.swift in Sources */,
+				DB4860D01B88C67500C4279E /* IngredientTableViewCell.swift in Sources */,
 				DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */,
+				DB4860D61B89EAFA00C4279E /* Label.swift in Sources */,
 				DBE0691B1B7F6F4600E6CA3F /* Theme.swift in Sources */,
 				DB2624611B88A5F5008EAAA4 /* ProductSearchAPI.swift in Sources */,
+				DB4860DB1B89EC2A00C4279E /* LabelCollectionViewCell.swift in Sources */,
+				DB4860D81B89EB8E00C4279E /* DebugData.swift in Sources */,
 				DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */,
 				DBBF50171B80AA7400759C40 /* ProductViewController.swift in Sources */,
 				DB4860CA1B88B6F700C4279E /* ParallaxHeaderView.swift in Sources */,
+				DB4860DD1B89F86E00C4279E /* LabelsTableViewCell.swift in Sources */,
 				DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
