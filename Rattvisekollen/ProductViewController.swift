@@ -15,6 +15,9 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var parallaxHeaderView: ParallaxHeaderView!
 
+    @IBOutlet weak var labelThumbnailStackView: UIStackView!
+    var labelsShowing: Bool = false
+
     var product: Product? = nil
 
     class func pushFromViewController(parent: UIViewController, forProduct product: Product) {
@@ -28,14 +31,16 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTitleView()
+        self.setupParallaxHeaderView()
+        self.setupLabelThumbnails()
         self.productNameLabel.text = self.product!.name
-        self.parallaxHeaderView.contentVisibilityHandler = self.setNavbarTitleVisible
+        
         
         self.tableView.registerNib(UINib(nibName: "IngredientsHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ingredientsHeaderView");
         self.tableView.registerNib(UINib(nibName: "IngredientsFooterView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ingredientsFooterView");
     }
 
-    // MARK: Parallax handler
+    // MARK: Parallax header
     
     func setupTitleView() {
         let title = UILabel()
@@ -58,6 +63,35 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
+    func setupParallaxHeaderView() {
+        self.parallaxHeaderView.contentVisibilityHandler = self.setNavbarTitleVisible
+        (self.tableView.tableHeaderView as! TouchRedirectView).targetView = self.parallaxHeaderView
+    }
+    
+    func setupLabelThumbnails() {
+        guard let labels = self.product?.labels else {
+            return
+        }
+        for label in labels {
+            let imageView = UIImageView(image: label.loadThumbnail())
+            imageView.contentMode = .ScaleAspectFit
+            self.labelThumbnailStackView.addArrangedSubview(imageView)
+        }
+    }
+    
+    // MARK: Show labels
+    
+    @IBAction func showLabelsButtonPressed(sender: UIButton) {
+        self.labelsShowing = !self.labelsShowing
+        self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
+
+        UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .CurveEaseInOut, animations: {
+            self.labelThumbnailStackView.transform = self.labelsShowing ? CGAffineTransformMakeScale(1.1, 1.1) : CGAffineTransformIdentity
+            self.labelThumbnailStackView.alpha = self.labelsShowing ? 1.0 : 0.7
+        }, completion:nil)
+    }
+    
+    
     // MARK: UITableViewDataSource
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -66,7 +100,7 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0: return 1
+        case 0: return self.labelsShowing ? 1 : 0
         case 1: return self.product!.ingredients.count
         default: return 0
         }

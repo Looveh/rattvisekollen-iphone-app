@@ -20,6 +20,7 @@
 		DB4860D81B89EB8E00C4279E /* DebugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860D71B89EB8E00C4279E /* DebugData.swift */; };
 		DB4860DB1B89EC2A00C4279E /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860DA1B89EC2A00C4279E /* LabelCollectionViewCell.swift */; };
 		DB4860DD1B89F86E00C4279E /* LabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860DC1B89F86E00C4279E /* LabelsTableViewCell.swift */; };
+		DB4860DF1B8A002800C4279E /* TouchRedirectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4860DE1B8A002800C4279E /* TouchRedirectView.swift */; };
 		DB52FFF01B7F5930004ECDEE /* ScanViewModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */; };
 		DBBE78931B7F32AD00371C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78921B7F32AD00371C1C /* AppDelegate.swift */; };
 		DBBE78951B7F32AD00371C1C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE78941B7F32AD00371C1C /* StartViewController.swift */; };
@@ -67,6 +68,7 @@
 		DB4860D71B89EB8E00C4279E /* DebugData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugData.swift; sourceTree = "<group>"; };
 		DB4860DA1B89EC2A00C4279E /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB4860DC1B89F86E00C4279E /* LabelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsTableViewCell.swift; sourceTree = "<group>"; };
+		DB4860DE1B8A002800C4279E /* TouchRedirectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchRedirectView.swift; sourceTree = "<group>"; };
 		DB52FFEF1B7F5930004ECDEE /* ScanViewModalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewModalAnimation.swift; sourceTree = "<group>"; };
 		DBBE788F1B7F32AD00371C1C /* Rattvisekollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rattvisekollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBE78921B7F32AD00371C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				DB3F44BC1B80EBF300EB85B3 /* CircleView.swift */,
 				DB3F44BE1B80F49A00EB85B3 /* RoundRectView.swift */,
 				DB4860C91B88B6F700C4279E /* ParallaxHeaderView.swift */,
+				DB4860DE1B8A002800C4279E /* TouchRedirectView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				DB4860DB1B89EC2A00C4279E /* LabelCollectionViewCell.swift in Sources */,
 				DB4860D81B89EB8E00C4279E /* DebugData.swift in Sources */,
 				DBBE78C41B7F37E800371C1C /* ScanViewController.swift in Sources */,
+				DB4860DF1B8A002800C4279E /* TouchRedirectView.swift in Sources */,
 				DBBF50171B80AA7400759C40 /* ProductViewController.swift in Sources */,
 				DB4860CA1B88B6F700C4279E /* ParallaxHeaderView.swift in Sources */,
 				DB4860DD1B89F86E00C4279E /* LabelsTableViewCell.swift in Sources */,

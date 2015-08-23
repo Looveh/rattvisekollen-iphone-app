@@ -27,6 +27,10 @@ class Label: NSObject {
     func loadImage() -> UIImage {
         return UIImage(named: self.imageName)!
     }
+    
+    func loadThumbnail() -> UIImage {
+        return UIImage(named: "\(self.imageName)-thumbnail")!
+    }
 
     class func createLabels() -> [String : Label] {
         return [
