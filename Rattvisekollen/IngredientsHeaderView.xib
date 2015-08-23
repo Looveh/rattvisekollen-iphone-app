@@ -36,7 +36,6 @@
                     <constraint firstItem="vIy-2L-8aJ" firstAttribute="leading" secondItem="6rT-0a-cEw" secondAttribute="leading" constant="20" id="gMf-Bu-S1d"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="458" y="286"/>
         </tableViewCell>
     </objects>
