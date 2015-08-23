@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum ProductSection: Int {
+    case Labels = 0, Summary = 1, Ingredients = 2
+}
+
 class ProductViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var productNameLabel: UILabel!
@@ -93,7 +97,7 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
 
         UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .CurveEaseInOut, animations: {
             self.labelThumbnailStackView.transform = self.labelsShowing ? CGAffineTransformMakeScale(1.1, 1.1) : CGAffineTransformIdentity
-            self.labelThumbnailStackView.alpha = self.labelsShowing ? 1.0 : 0.7
+            self.labelThumbnailStackView.alpha = self.labelsShowing ? 1.0 : 0.6
         }, completion:nil)
     }
     
@@ -101,47 +105,58 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: UITableViewDataSource
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0: return 1// self.labelsShowing ? 1 : 0
-        case 1: return self.product!.ingredients.count
-        default: return 0
+        switch ProductSection(rawValue: section)! {
+        case .Labels: return 1
+        case .Summary: return 1
+        case .Ingredients: return self.product!.ingredients.count
         }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if (indexPath.section == 0) {
-            let cell = tableView.dequeueReusableCellWithIdentifier("summaryCell") as! LabelsTableViewCell
+        let section = ProductSection(rawValue: indexPath.section)
+
+        if section == .Labels {
+            let cell = tableView.dequeueReusableCellWithIdentifier("labelsCell") as! LabelsTableViewCell
             cell.configureWithParent(self, labels: (self.product?.labels)!)
             return cell
+        } else if section == .Summary {
+            let cell = tableView.dequeueReusableCellWithIdentifier("summaryCell") as! ProductSummaryTableViewCell
+            cell.configureWithProduct(self.product!)
+            return cell
+        } else if (section == .Ingredients) {
+            let cell = tableView.dequeueReusableCellWithIdentifier("IngredientTableViewCell") as! IngredientTableViewCell
+            cell.configureWithIngredient(self.product!.ingredients[indexPath.row])
+            return cell
         }
-
-        let cell = tableView.dequeueReusableCellWithIdentifier("IngredientTableViewCell") as! IngredientTableViewCell
-        cell.configureWithIngredient(self.product!.ingredients[indexPath.row])
-        return cell
+        return UITableViewCell()
     }
     
     // MARK: UITableViewDelegate
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if (indexPath.section == 0) {
-            return self.labelsShowing ? 200 : 0.0
+        switch ProductSection(rawValue: indexPath.section)! {
+        case .Labels: return self.labelsShowing ? 200 : 0
+        case .Summary: return 100
+        case .Ingredients: return 20
         }
-        return 20
     }
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if (section == 1) {
+        if (ProductSection(rawValue: section) == .Ingredients) {
             return tableView.dequeueReusableHeaderFooterViewWithIdentifier("ingredientsHeaderView")
         }
         return nil
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 1 ? 40 : 0
+        if (ProductSection(rawValue: section) == .Ingredients) {
+            return 40
+        }
+        return 0
     }
     
     // MARK: UIScrollViewDelegate
